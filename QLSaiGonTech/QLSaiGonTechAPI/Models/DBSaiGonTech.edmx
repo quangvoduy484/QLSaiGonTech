@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLSaiGonTech.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="QLSaiGonTechStoreContainer">
+          <EntitySet Name="ACADEMICYEAR" EntityType="QLSaiGonTech.Store.ACADEMICYEAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CANDIDATEPROFILE" EntityType="QLSaiGonTech.Store.CANDIDATEPROFILE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CANDIDATETYPE" EntityType="QLSaiGonTech.Store.CANDIDATETYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="COURSE" EntityType="QLSaiGonTech.Store.COURSE" store:Type="Tables" store:Schema="dbo" store:Name="COURSE">
+            <DefiningQuery>SELECT 
+      [COURSE].[ID_STUDENT] AS [ID_STUDENT], 
+      [COURSE].[MATH] AS [MATH], 
+      [COURSE].[LITERATURE] AS [LITERATURE], 
+      [COURSE].[INTERVIEW] AS [INTERVIEW], 
+      [COURSE].[ENGLIST] AS [ENGLIST], 
+      [COURSE].[GRADE_COMMENT] AS [GRADE_COMMENT], 
+      [COURSE].[RESULT] AS [RESULT]
+      FROM [dbo].[COURSE] AS [COURSE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EDUCATION" EntityType="QLSaiGonTech.Store.EDUCATION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INPUT" EntityType="QLSaiGonTech.Store.INPUT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INTAKES" EntityType="QLSaiGonTech.Store.INTAKES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PROFILETYPE" EntityType="QLSaiGonTech.Store.PROFILETYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SEMESTER" EntityType="QLSaiGonTech.Store.SEMESTER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="STAGE" EntityType="QLSaiGonTech.Store.STAGE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="STATUS" EntityType="QLSaiGonTech.Store.STATUS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="STUDENT" EntityType="QLSaiGonTech.Store.STUDENT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="STUDYPROGRAM" EntityType="QLSaiGonTech.Store.STUDYPROGRAM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="QLSaiGonTech.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="YEARS" EntityType="QLSaiGonTech.Store.YEARS" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ACADEMIDYER_YEARS" Association="QLSaiGonTech.Store.FK_ACADEMIDYER_YEARS">
+            <End Role="YEARS" EntitySet="YEARS" />
+            <End Role="ACADEMICYEAR" EntitySet="ACADEMICYEAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANDIDATEPROFILE_PROFILE" Association="QLSaiGonTech.Store.FK_CANDIDATEPROFILE_PROFILE">
+            <End Role="PROFILETYPE" EntitySet="PROFILETYPE" />
+            <End Role="CANDIDATEPROFILE" EntitySet="CANDIDATEPROFILE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANDIDATEPROFILE_STUDENT" Association="QLSaiGonTech.Store.FK_CANDIDATEPROFILE_STUDENT">
+            <End Role="STUDENT" EntitySet="STUDENT" />
+            <End Role="CANDIDATEPROFILE" EntitySet="CANDIDATEPROFILE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COURSE_STUDENT" Association="QLSaiGonTech.Store.FK_COURSE_STUDENT">
+            <End Role="STUDENT" EntitySet="STUDENT" />
+            <End Role="COURSE" EntitySet="COURSE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROFILE_INPUT" Association="QLSaiGonTech.Store.FK_PROFILE_INPUT">
+            <End Role="INPUT" EntitySet="INPUT" />
+            <End Role="PROFILETYPE" EntitySet="PROFILETYPE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROFILE_STATUS" Association="QLSaiGonTech.Store.FK_PROFILE_STATUS">
+            <End Role="STATUS" EntitySet="STATUS" />
+            <End Role="PROFILETYPE" EntitySet="PROFILETYPE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SEMESTER_ACADEMICYEAR" Association="QLSaiGonTech.Store.FK_SEMESTER_ACADEMICYEAR">
+            <End Role="ACADEMICYEAR" EntitySet="ACADEMICYEAR" />
+            <End Role="SEMESTER" EntitySet="SEMESTER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STAGE_INTAKES" Association="QLSaiGonTech.Store.FK_STAGE_INTAKES">
+            <End Role="INTAKES" EntitySet="INTAKES" />
+            <End Role="STAGE" EntitySet="STAGE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STAGE_SEMESTER" Association="QLSaiGonTech.Store.FK_STAGE_SEMESTER">
+            <End Role="SEMESTER" EntitySet="SEMESTER" />
+            <End Role="STAGE" EntitySet="STAGE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_CANDIDATETYPE" Association="QLSaiGonTech.Store.FK_STUDENT_CANDIDATETYPE">
+            <End Role="CANDIDATETYPE" EntitySet="CANDIDATETYPE" />
+            <End Role="STUDENT" EntitySet="STUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_EDUCATION" Association="QLSaiGonTech.Store.FK_STUDENT_EDUCATION">
+            <End Role="EDUCATION" EntitySet="EDUCATION" />
+            <End Role="STUDENT" EntitySet="STUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_INTAKES" Association="QLSaiGonTech.Store.FK_STUDENT_INTAKES">
+            <End Role="INTAKES" EntitySet="INTAKES" />
+            <End Role="STUDENT" EntitySet="STUDENT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_STUDYPROGRAM" Association="QLSaiGonTech.Store.FK_STUDENT_STUDYPROGRAM">
+            <End Role="STUDYPROGRAM" EntitySet="STUDYPROGRAM" />
+            <End Role="STUDENT" EntitySet="STUDENT" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ACADEMICYEAR">
+          <Key>
+            <PropertyRef Name="ID_ACADEMICYEAR" />
+          </Key>
+          <Property Name="ID_ACADEMICYEAR" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="ID_YEAR" Type="int" Nullable="false" />
+          <Property Name="ACADEMICNAME" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CANDIDATEPROFILE">
+          <Key>
+            <PropertyRef Name="ID_CANDIDATEPROFILE" />
+          </Key>
+          <Property Name="ID_CANDIDATEPROFILE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CANDIDATE_PROFILE_NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID_STUDENT" Type="int" />
+          <Property Name="ID_PROFILE" Type="int" />
+        </EntityType>
+        <EntityType Name="CANDIDATETYPE">
+          <Key>
+            <PropertyRef Name="ID_CANDIDATE" />
+          </Key>
+          <Property Name="ID_CANDIDATE" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="CANDIDATENAME" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'QLSGT.dbo.COURSE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="COURSE">
+          <Key>
+            <PropertyRef Name="ID_STUDENT" />
+          </Key>
+          <Property Name="ID_STUDENT" Type="int" Nullable="false" />
+          <Property Name="MATH" Type="float" />
+          <Property Name="LITERATURE" Type="float" />
+          <Property Name="INTERVIEW" Type="float" />
+          <Property Name="ENGLIST" Type="float" />
+          <Property Name="GRADE_COMMENT" Type="nvarchar" MaxLength="50" />
+          <Property Name="RESULT" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EDUCATION">
+          <Key>
+            <PropertyRef Name="ID_EDUCATION" />
+          </Key>
+          <Property Name="ID_EDUCATION" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="EDUCATIONNAME" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="INPUT">
+          <Key>
+            <PropertyRef Name="ID_INPUT" />
+          </Key>
+          <Property Name="ID_INPUT" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="INPUTNAME" Type="char" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="INTAKES">
+          <Key>
+            <PropertyRef Name="ID_INTAKES" />
+          </Key>
+          <Property Name="ID_INTAKES" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="INTAKENAME" Type="int" />
+        </EntityType>
+        <EntityType Name="PROFILETYPE">
+          <Key>
+            <PropertyRef Name="ID_PROFILE" />
+          </Key>
+          <Property Name="ID_PROFILE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_INPUT" Type="int" Nullable="false" />
+          <Property Name="ID_STATUS" Type="int" Nullable="false" />
+          <Property Name="ENGLISH_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="VIETNAMESE_NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="SEQUENCE_NUM" Type="int" />
+          <Property Name="NOTE" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SEMESTER">
+          <Key>
+            <PropertyRef Name="ID_SEMESTER" />
+          </Key>
+          <Property Name="ID_SEMESTER" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="ID_ACADEMICYEAR" Type="char" MaxLength="7" />
+          <Property Name="SEMESTER_NAME" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="STAGE">
+          <Key>
+            <PropertyRef Name="ID_STAGE" />
+          </Key>
+          <Property Name="ID_STAGE" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="ID_SEMESTER" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="ID_INTAKES" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="STAGENAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="ADMISSIONS_DATE" Type="date" />
+          <Property Name="EXAM_DATE" Type="date" />
+          <Property Name="EXAM_TIME" Type="char" MaxLength="20" />
+          <Property Name="TIMEOFENGLISHEXAM" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="STATUS">
+          <Key>
+            <PropertyRef Name="ID_STATUS" />
+          </Key>
+          <Property Name="ID_STATUS" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="STATUS_NAME" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="STUDENT">
+          <Key>
+            <PropertyRef Name="ID_STUDENT" />
+          </Key>
+          <Property Name="ID_EDUCATION" Type="char" MaxLength="7" />
+          <Property Name="ID_INTAKES" Type="char" MaxLength="7" />
+          <Property Name="ID_CADIDATE" Type="char" MaxLength="7" />
+          <Property Name="ID_PROGRAM" Type="char" MaxLength="7" />
+          <Property Name="ID_STUDENT" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LASTNAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="FIRSTNAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="BIRTHDAY" Type="date" />
+          <Property Name="GENDER" Type="char" MaxLength="6" />
+          <Property Name="PHONE" Type="char" MaxLength="20" />
+          <Property Name="WARDS" Type="nvarchar" MaxLength="50" />
+          <Property Name="DISTRICT" Type="nvarchar" MaxLength="50" />
+          <Property Name="PROVINCE" Type="nvarchar" MaxLength="50" />
+          <Property Name="NATION" Type="nvarchar" MaxLength="50" />
+          <Property Name="PLACEOFBIRTH" Type="nvarchar" MaxLength="100" />
+          <Property Name="MARITAL_STATUS" Type="varchar" MaxLength="20" />
+          <Property Name="HOMEPHONE" Type="varchar" MaxLength="20" />
+          <Property Name="HIGHSCHOOLNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="HIGHSCHOOLCITY" Type="nvarchar" MaxLength="50" />
+          <Property Name="GRADUATEYEAR" Type="date" />
+          <Property Name="HOMECOUNTRY" Type="nvarchar" MaxLength="50" />
+          <Property Name="REGISTRYDATE" Type="date" />
+        </EntityType>
+        <EntityType Name="STUDYPROGRAM">
+          <Key>
+            <PropertyRef Name="ID_PROGRAM" />
+          </Key>
+          <Property Name="ID_PROGRAM" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="PROGRAMS_NAME" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="YEARS">
+          <Key>
+            <PropertyRef Name="ID_YEAR" />
+          </Key>
+          <Property Name="ID_YEAR" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="YEARS_NAME" Type="int" />
+        </EntityType>
+        <Association Name="FK_ACADEMIDYER_YEARS">
+          <End Role="YEARS" Type="QLSaiGonTech.Store.YEARS" Multiplicity="1" />
+          <End Role="ACADEMICYEAR" Type="QLSaiGonTech.Store.ACADEMICYEAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YEARS">
+              <PropertyRef Name="ID_YEAR" />
+            </Principal>
+            <Dependent Role="ACADEMICYEAR">
+              <PropertyRef Name="ID_YEAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANDIDATEPROFILE_PROFILE">
+          <End Role="PROFILETYPE" Type="QLSaiGonTech.Store.PROFILETYPE" Multiplicity="0..1" />
+          <End Role="CANDIDATEPROFILE" Type="QLSaiGonTech.Store.CANDIDATEPROFILE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILETYPE">
+              <PropertyRef Name="ID_PROFILE" />
+            </Principal>
+            <Dependent Role="CANDIDATEPROFILE">
+              <PropertyRef Name="ID_PROFILE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANDIDATEPROFILE_STUDENT">
+          <End Role="STUDENT" Type="QLSaiGonTech.Store.STUDENT" Multiplicity="0..1" />
+          <End Role="CANDIDATEPROFILE" Type="QLSaiGonTech.Store.CANDIDATEPROFILE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STUDENT">
+              <PropertyRef Name="ID_STUDENT" />
+            </Principal>
+            <Dependent Role="CANDIDATEPROFILE">
+              <PropertyRef Name="ID_STUDENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COURSE_STUDENT">
+          <End Role="STUDENT" Type="QLSaiGonTech.Store.STUDENT" Multiplicity="1" />
+          <End Role="COURSE" Type="QLSaiGonTech.Store.COURSE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="STUDENT">
+              <PropertyRef Name="ID_STUDENT" />
+            </Principal>
+            <Dependent Role="COURSE">
+              <PropertyRef Name="ID_STUDENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROFILE_INPUT">
+          <End Role="INPUT" Type="QLSaiGonTech.Store.INPUT" Multiplicity="1" />
+          <End Role="PROFILETYPE" Type="QLSaiGonTech.Store.PROFILETYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INPUT">
+              <PropertyRef Name="ID_INPUT" />
+            </Principal>
+            <Dependent Role="PROFILETYPE">
+              <PropertyRef Name="ID_INPUT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROFILE_STATUS">
+          <End Role="STATUS" Type="QLSaiGonTech.Store.STATUS" Multiplicity="1" />
+          <End Role="PROFILETYPE" Type="QLSaiGonTech.Store.PROFILETYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STATUS">
+              <PropertyRef Name="ID_STATUS" />
+            </Principal>
+            <Dependent Role="PROFILETYPE">
+              <PropertyRef Name="ID_STATUS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SEMESTER_ACADEMICYEAR">
+          <End Role="ACADEMICYEAR" Type="QLSaiGonTech.Store.ACADEMICYEAR" Multiplicity="0..1" />
+          <End Role="SEMESTER" Type="QLSaiGonTech.Store.SEMESTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACADEMICYEAR">
+              <PropertyRef Name="ID_ACADEMICYEAR" />
+            </Principal>
+            <Dependent Role="SEMESTER">
+              <PropertyRef Name="ID_ACADEMICYEAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STAGE_INTAKES">
+          <End Role="INTAKES" Type="QLSaiGonTech.Store.INTAKES" Multiplicity="1" />
+          <End Role="STAGE" Type="QLSaiGonTech.Store.STAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTAKES">
+              <PropertyRef Name="ID_INTAKES" />
+            </Principal>
+            <Dependent Role="STAGE">
+              <PropertyRef Name="ID_INTAKES" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STAGE_SEMESTER">
+          <End Role="SEMESTER" Type="QLSaiGonTech.Store.SEMESTER" Multiplicity="1" />
+          <End Role="STAGE" Type="QLSaiGonTech.Store.STAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEMESTER">
+              <PropertyRef Name="ID_SEMESTER" />
+            </Principal>
+            <Dependent Role="STAGE">
+              <PropertyRef Name="ID_SEMESTER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_CANDIDATETYPE">
+          <End Role="CANDIDATETYPE" Type="QLSaiGonTech.Store.CANDIDATETYPE" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.Store.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANDIDATETYPE">
+              <PropertyRef Name="ID_CANDIDATE" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_CADIDATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_EDUCATION">
+          <End Role="EDUCATION" Type="QLSaiGonTech.Store.EDUCATION" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.Store.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EDUCATION">
+              <PropertyRef Name="ID_EDUCATION" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_EDUCATION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_INTAKES">
+          <End Role="INTAKES" Type="QLSaiGonTech.Store.INTAKES" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.Store.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTAKES">
+              <PropertyRef Name="ID_INTAKES" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_INTAKES" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_STUDYPROGRAM">
+          <End Role="STUDYPROGRAM" Type="QLSaiGonTech.Store.STUDYPROGRAM" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.Store.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STUDYPROGRAM">
+              <PropertyRef Name="ID_PROGRAM" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_PROGRAM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLSaiGonTech" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DB_QLSaiGonTech" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACADEMICYEARs" EntityType="QLSaiGonTech.ACADEMICYEAR" />
+          <EntitySet Name="CANDIDATEPROFILEs" EntityType="QLSaiGonTech.CANDIDATEPROFILE" />
+          <EntitySet Name="CANDIDATETYPEs" EntityType="QLSaiGonTech.CANDIDATETYPE" />
+          <EntitySet Name="COURSEs" EntityType="QLSaiGonTech.COURSE" />
+          <EntitySet Name="EDUCATIONs" EntityType="QLSaiGonTech.EDUCATION" />
+          <EntitySet Name="INPUTs" EntityType="QLSaiGonTech.INPUT" />
+          <EntitySet Name="INTAKES" EntityType="QLSaiGonTech.INTAKE" />
+          <EntitySet Name="PROFILETYPEs" EntityType="QLSaiGonTech.PROFILETYPE" />
+          <EntitySet Name="SEMESTERs" EntityType="QLSaiGonTech.SEMESTER" />
+          <EntitySet Name="STAGEs" EntityType="QLSaiGonTech.STAGE" />
+          <EntitySet Name="STATUS" EntityType="QLSaiGonTech.STATUS" />
+          <EntitySet Name="STUDENTs" EntityType="QLSaiGonTech.STUDENT" />
+          <EntitySet Name="STUDYPROGRAMs" EntityType="QLSaiGonTech.STUDYPROGRAM" />
+          <EntitySet Name="sysdiagrams" EntityType="QLSaiGonTech.sysdiagram" />
+          <EntitySet Name="YEARS" EntityType="QLSaiGonTech.YEAR" />
+          <AssociationSet Name="FK_ACADEMIDYER_YEARS" Association="QLSaiGonTech.FK_ACADEMIDYER_YEARS">
+            <End Role="YEARS" EntitySet="YEARS" />
+            <End Role="ACADEMICYEAR" EntitySet="ACADEMICYEARs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SEMESTER_ACADEMICYEAR" Association="QLSaiGonTech.FK_SEMESTER_ACADEMICYEAR">
+            <End Role="ACADEMICYEAR" EntitySet="ACADEMICYEARs" />
+            <End Role="SEMESTER" EntitySet="SEMESTERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANDIDATEPROFILE_PROFILE" Association="QLSaiGonTech.FK_CANDIDATEPROFILE_PROFILE">
+            <End Role="PROFILETYPE" EntitySet="PROFILETYPEs" />
+            <End Role="CANDIDATEPROFILE" EntitySet="CANDIDATEPROFILEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CANDIDATEPROFILE_STUDENT" Association="QLSaiGonTech.FK_CANDIDATEPROFILE_STUDENT">
+            <End Role="STUDENT" EntitySet="STUDENTs" />
+            <End Role="CANDIDATEPROFILE" EntitySet="CANDIDATEPROFILEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_CANDIDATETYPE" Association="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE">
+            <End Role="CANDIDATETYPE" EntitySet="CANDIDATETYPEs" />
+            <End Role="STUDENT" EntitySet="STUDENTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COURSE_STUDENT" Association="QLSaiGonTech.FK_COURSE_STUDENT">
+            <End Role="STUDENT" EntitySet="STUDENTs" />
+            <End Role="COURSE" EntitySet="COURSEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_EDUCATION" Association="QLSaiGonTech.FK_STUDENT_EDUCATION">
+            <End Role="EDUCATION" EntitySet="EDUCATIONs" />
+            <End Role="STUDENT" EntitySet="STUDENTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROFILE_INPUT" Association="QLSaiGonTech.FK_PROFILE_INPUT">
+            <End Role="INPUT" EntitySet="INPUTs" />
+            <End Role="PROFILETYPE" EntitySet="PROFILETYPEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STAGE_INTAKES" Association="QLSaiGonTech.FK_STAGE_INTAKES">
+            <End Role="INTAKES" EntitySet="INTAKES" />
+            <End Role="STAGE" EntitySet="STAGEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_INTAKES" Association="QLSaiGonTech.FK_STUDENT_INTAKES">
+            <End Role="INTAKES" EntitySet="INTAKES" />
+            <End Role="STUDENT" EntitySet="STUDENTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PROFILE_STATUS" Association="QLSaiGonTech.FK_PROFILE_STATUS">
+            <End Role="STATUS" EntitySet="STATUS" />
+            <End Role="PROFILETYPE" EntitySet="PROFILETYPEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STAGE_SEMESTER" Association="QLSaiGonTech.FK_STAGE_SEMESTER">
+            <End Role="SEMESTER" EntitySet="SEMESTERs" />
+            <End Role="STAGE" EntitySet="STAGEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STUDENT_STUDYPROGRAM" Association="QLSaiGonTech.FK_STUDENT_STUDYPROGRAM">
+            <End Role="STUDYPROGRAM" EntitySet="STUDYPROGRAMs" />
+            <End Role="STUDENT" EntitySet="STUDENTs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ACADEMICYEAR">
+          <Key>
+            <PropertyRef Name="ID_ACADEMICYEAR" />
+          </Key>
+          <Property Name="ID_ACADEMICYEAR" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_YEAR" Type="Int32" Nullable="false" />
+          <Property Name="ACADEMICNAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="YEAR" Relationship="QLSaiGonTech.FK_ACADEMIDYER_YEARS" FromRole="ACADEMICYEAR" ToRole="YEARS" />
+          <NavigationProperty Name="SEMESTERs" Relationship="QLSaiGonTech.FK_SEMESTER_ACADEMICYEAR" FromRole="ACADEMICYEAR" ToRole="SEMESTER" />
+        </EntityType>
+        <EntityType Name="CANDIDATEPROFILE">
+          <Key>
+            <PropertyRef Name="ID_CANDIDATEPROFILE" />
+          </Key>
+          <Property Name="ID_CANDIDATEPROFILE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CANDIDATE_PROFILE_NAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ID_STUDENT" Type="Int32" />
+          <Property Name="ID_PROFILE" Type="Int32" />
+          <NavigationProperty Name="PROFILETYPE" Relationship="QLSaiGonTech.FK_CANDIDATEPROFILE_PROFILE" FromRole="CANDIDATEPROFILE" ToRole="PROFILETYPE" />
+          <NavigationProperty Name="STUDENT" Relationship="QLSaiGonTech.FK_CANDIDATEPROFILE_STUDENT" FromRole="CANDIDATEPROFILE" ToRole="STUDENT" />
+        </EntityType>
+        <EntityType Name="CANDIDATETYPE">
+          <Key>
+            <PropertyRef Name="ID_CANDIDATE" />
+          </Key>
+          <Property Name="ID_CANDIDATE" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="CANDIDATENAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="STUDENTs" Relationship="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE" FromRole="CANDIDATETYPE" ToRole="STUDENT" />
+        </EntityType>
+        <EntityType Name="COURSE">
+          <Key>
+            <PropertyRef Name="ID_STUDENT" />
+          </Key>
+          <Property Name="ID_STUDENT" Type="Int32" Nullable="false" />
+          <Property Name="MATH" Type="Double" />
+          <Property Name="LITERATURE" Type="Double" />
+          <Property Name="INTERVIEW" Type="Double" />
+          <Property Name="ENGLIST" Type="Double" />
+          <Property Name="GRADE_COMMENT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RESULT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="STUDENT" Relationship="QLSaiGonTech.FK_COURSE_STUDENT" FromRole="COURSE" ToRole="STUDENT" />
+        </EntityType>
+        <EntityType Name="EDUCATION">
+          <Key>
+            <PropertyRef Name="ID_EDUCATION" />
+          </Key>
+          <Property Name="ID_EDUCATION" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="EDUCATIONNAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="STUDENTs" Relationship="QLSaiGonTech.FK_STUDENT_EDUCATION" FromRole="EDUCATION" ToRole="STUDENT" />
+        </EntityType>
+        <EntityType Name="INPUT">
+          <Key>
+            <PropertyRef Name="ID_INPUT" />
+          </Key>
+          <Property Name="ID_INPUT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="INPUTNAME" Type="String" MaxLength="40" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="PROFILETYPEs" Relationship="QLSaiGonTech.FK_PROFILE_INPUT" FromRole="INPUT" ToRole="PROFILETYPE" />
+        </EntityType>
+        <EntityType Name="INTAKE">
+          <Key>
+            <PropertyRef Name="ID_INTAKES" />
+          </Key>
+          <Property Name="ID_INTAKES" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="INTAKENAME" Type="Int32" />
+          <NavigationProperty Name="STAGEs" Relationship="QLSaiGonTech.FK_STAGE_INTAKES" FromRole="INTAKES" ToRole="STAGE" />
+          <NavigationProperty Name="STUDENTs" Relationship="QLSaiGonTech.FK_STUDENT_INTAKES" FromRole="INTAKES" ToRole="STUDENT" />
+        </EntityType>
+        <EntityType Name="PROFILETYPE">
+          <Key>
+            <PropertyRef Name="ID_PROFILE" />
+          </Key>
+          <Property Name="ID_PROFILE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_INPUT" Type="Int32" Nullable="false" />
+          <Property Name="ID_STATUS" Type="Int32" Nullable="false" />
+          <Property Name="ENGLISH_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="VIETNAMESE_NAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SEQUENCE_NUM" Type="Int32" />
+          <Property Name="NOTE" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="CANDIDATEPROFILEs" Relationship="QLSaiGonTech.FK_CANDIDATEPROFILE_PROFILE" FromRole="PROFILETYPE" ToRole="CANDIDATEPROFILE" />
+          <NavigationProperty Name="INPUT" Relationship="QLSaiGonTech.FK_PROFILE_INPUT" FromRole="PROFILETYPE" ToRole="INPUT" />
+          <NavigationProperty Name="STATUS" Relationship="QLSaiGonTech.FK_PROFILE_STATUS" FromRole="PROFILETYPE" ToRole="STATUS" />
+        </EntityType>
+        <EntityType Name="SEMESTER">
+          <Key>
+            <PropertyRef Name="ID_SEMESTER" />
+          </Key>
+          <Property Name="ID_SEMESTER" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_ACADEMICYEAR" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="SEMESTER_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ACADEMICYEAR" Relationship="QLSaiGonTech.FK_SEMESTER_ACADEMICYEAR" FromRole="SEMESTER" ToRole="ACADEMICYEAR" />
+          <NavigationProperty Name="STAGEs" Relationship="QLSaiGonTech.FK_STAGE_SEMESTER" FromRole="SEMESTER" ToRole="STAGE" />
+        </EntityType>
+        <EntityType Name="STAGE">
+          <Key>
+            <PropertyRef Name="ID_STAGE" />
+          </Key>
+          <Property Name="ID_STAGE" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_SEMESTER" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_INTAKES" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="STAGENAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ADMISSIONS_DATE" Type="DateTime" Precision="0" />
+          <Property Name="EXAM_DATE" Type="DateTime" Precision="0" />
+          <Property Name="EXAM_TIME" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="TIMEOFENGLISHEXAM" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="INTAKE" Relationship="QLSaiGonTech.FK_STAGE_INTAKES" FromRole="STAGE" ToRole="INTAKES" />
+          <NavigationProperty Name="SEMESTER" Relationship="QLSaiGonTech.FK_STAGE_SEMESTER" FromRole="STAGE" ToRole="SEMESTER" />
+        </EntityType>
+        <EntityType Name="STATUS">
+          <Key>
+            <PropertyRef Name="ID_STATUS" />
+          </Key>
+          <Property Name="ID_STATUS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STATUS_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PROFILETYPEs" Relationship="QLSaiGonTech.FK_PROFILE_STATUS" FromRole="STATUS" ToRole="PROFILETYPE" />
+        </EntityType>
+        <EntityType Name="STUDENT">
+          <Key>
+            <PropertyRef Name="ID_STUDENT" />
+          </Key>
+          <Property Name="ID_EDUCATION" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_INTAKES" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_CADIDATE" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_PROGRAM" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="ID_STUDENT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LASTNAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FIRSTNAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="BIRTHDAY" Type="DateTime" Precision="0" />
+          <Property Name="GENDER" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="PHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="WARDS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DISTRICT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PROVINCE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NATION" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PLACEOFBIRTH" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MARITAL_STATUS" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="HOMEPHONE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="HIGHSCHOOLNAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HIGHSCHOOLCITY" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GRADUATEYEAR" Type="DateTime" Precision="0" />
+          <Property Name="HOMECOUNTRY" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="REGISTRYDATE" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="CANDIDATEPROFILEs" Relationship="QLSaiGonTech.FK_CANDIDATEPROFILE_STUDENT" FromRole="STUDENT" ToRole="CANDIDATEPROFILE" />
+          <NavigationProperty Name="CANDIDATETYPE" Relationship="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE" FromRole="STUDENT" ToRole="CANDIDATETYPE" />
+          <NavigationProperty Name="COURSE" Relationship="QLSaiGonTech.FK_COURSE_STUDENT" FromRole="STUDENT" ToRole="COURSE" />
+          <NavigationProperty Name="EDUCATION" Relationship="QLSaiGonTech.FK_STUDENT_EDUCATION" FromRole="STUDENT" ToRole="EDUCATION" />
+          <NavigationProperty Name="INTAKE" Relationship="QLSaiGonTech.FK_STUDENT_INTAKES" FromRole="STUDENT" ToRole="INTAKES" />
+          <NavigationProperty Name="STUDYPROGRAM" Relationship="QLSaiGonTech.FK_STUDENT_STUDYPROGRAM" FromRole="STUDENT" ToRole="STUDYPROGRAM" />
+        </EntityType>
+        <EntityType Name="STUDYPROGRAM">
+          <Key>
+            <PropertyRef Name="ID_PROGRAM" />
+          </Key>
+          <Property Name="ID_PROGRAM" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="PROGRAMS_NAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="STUDENTs" Relationship="QLSaiGonTech.FK_STUDENT_STUDYPROGRAM" FromRole="STUDYPROGRAM" ToRole="STUDENT" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="YEAR">
+          <Key>
+            <PropertyRef Name="ID_YEAR" />
+          </Key>
+          <Property Name="ID_YEAR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YEARS_NAME" Type="Int32" />
+          <NavigationProperty Name="ACADEMICYEARs" Relationship="QLSaiGonTech.FK_ACADEMIDYER_YEARS" FromRole="YEARS" ToRole="ACADEMICYEAR" />
+        </EntityType>
+        <Association Name="FK_ACADEMIDYER_YEARS">
+          <End Role="YEARS" Type="QLSaiGonTech.YEAR" Multiplicity="1" />
+          <End Role="ACADEMICYEAR" Type="QLSaiGonTech.ACADEMICYEAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YEARS">
+              <PropertyRef Name="ID_YEAR" />
+            </Principal>
+            <Dependent Role="ACADEMICYEAR">
+              <PropertyRef Name="ID_YEAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SEMESTER_ACADEMICYEAR">
+          <End Role="ACADEMICYEAR" Type="QLSaiGonTech.ACADEMICYEAR" Multiplicity="0..1" />
+          <End Role="SEMESTER" Type="QLSaiGonTech.SEMESTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACADEMICYEAR">
+              <PropertyRef Name="ID_ACADEMICYEAR" />
+            </Principal>
+            <Dependent Role="SEMESTER">
+              <PropertyRef Name="ID_ACADEMICYEAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANDIDATEPROFILE_PROFILE">
+          <End Role="PROFILETYPE" Type="QLSaiGonTech.PROFILETYPE" Multiplicity="0..1" />
+          <End Role="CANDIDATEPROFILE" Type="QLSaiGonTech.CANDIDATEPROFILE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROFILETYPE">
+              <PropertyRef Name="ID_PROFILE" />
+            </Principal>
+            <Dependent Role="CANDIDATEPROFILE">
+              <PropertyRef Name="ID_PROFILE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CANDIDATEPROFILE_STUDENT">
+          <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="0..1" />
+          <End Role="CANDIDATEPROFILE" Type="QLSaiGonTech.CANDIDATEPROFILE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STUDENT">
+              <PropertyRef Name="ID_STUDENT" />
+            </Principal>
+            <Dependent Role="CANDIDATEPROFILE">
+              <PropertyRef Name="ID_STUDENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_CANDIDATETYPE">
+          <End Role="CANDIDATETYPE" Type="QLSaiGonTech.CANDIDATETYPE" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CANDIDATETYPE">
+              <PropertyRef Name="ID_CANDIDATE" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_CADIDATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COURSE_STUDENT">
+          <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="1" />
+          <End Role="COURSE" Type="QLSaiGonTech.COURSE" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="STUDENT">
+              <PropertyRef Name="ID_STUDENT" />
+            </Principal>
+            <Dependent Role="COURSE">
+              <PropertyRef Name="ID_STUDENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_EDUCATION">
+          <End Role="EDUCATION" Type="QLSaiGonTech.EDUCATION" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EDUCATION">
+              <PropertyRef Name="ID_EDUCATION" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_EDUCATION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROFILE_INPUT">
+          <End Role="INPUT" Type="QLSaiGonTech.INPUT" Multiplicity="1" />
+          <End Role="PROFILETYPE" Type="QLSaiGonTech.PROFILETYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INPUT">
+              <PropertyRef Name="ID_INPUT" />
+            </Principal>
+            <Dependent Role="PROFILETYPE">
+              <PropertyRef Name="ID_INPUT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STAGE_INTAKES">
+          <End Role="INTAKES" Type="QLSaiGonTech.INTAKE" Multiplicity="1" />
+          <End Role="STAGE" Type="QLSaiGonTech.STAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTAKES">
+              <PropertyRef Name="ID_INTAKES" />
+            </Principal>
+            <Dependent Role="STAGE">
+              <PropertyRef Name="ID_INTAKES" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_INTAKES">
+          <End Role="INTAKES" Type="QLSaiGonTech.INTAKE" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTAKES">
+              <PropertyRef Name="ID_INTAKES" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_INTAKES" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PROFILE_STATUS">
+          <End Role="STATUS" Type="QLSaiGonTech.STATUS" Multiplicity="1" />
+          <End Role="PROFILETYPE" Type="QLSaiGonTech.PROFILETYPE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STATUS">
+              <PropertyRef Name="ID_STATUS" />
+            </Principal>
+            <Dependent Role="PROFILETYPE">
+              <PropertyRef Name="ID_STATUS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STAGE_SEMESTER">
+          <End Role="SEMESTER" Type="QLSaiGonTech.SEMESTER" Multiplicity="1" />
+          <End Role="STAGE" Type="QLSaiGonTech.STAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SEMESTER">
+              <PropertyRef Name="ID_SEMESTER" />
+            </Principal>
+            <Dependent Role="STAGE">
+              <PropertyRef Name="ID_SEMESTER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STUDENT_STUDYPROGRAM">
+          <End Role="STUDYPROGRAM" Type="QLSaiGonTech.STUDYPROGRAM" Multiplicity="0..1" />
+          <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STUDYPROGRAM">
+              <PropertyRef Name="ID_PROGRAM" />
+            </Principal>
+            <Dependent Role="STUDENT">
+              <PropertyRef Name="ID_PROGRAM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLSaiGonTechStoreContainer" CdmEntityContainer="DB_QLSaiGonTech">
+          <EntitySetMapping Name="ACADEMICYEARs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.ACADEMICYEAR">
+              <MappingFragment StoreEntitySet="ACADEMICYEAR">
+                <ScalarProperty Name="ID_ACADEMICYEAR" ColumnName="ID_ACADEMICYEAR" />
+                <ScalarProperty Name="ID_YEAR" ColumnName="ID_YEAR" />
+                <ScalarProperty Name="ACADEMICNAME" ColumnName="ACADEMICNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CANDIDATEPROFILEs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.CANDIDATEPROFILE">
+              <MappingFragment StoreEntitySet="CANDIDATEPROFILE">
+                <ScalarProperty Name="ID_CANDIDATEPROFILE" ColumnName="ID_CANDIDATEPROFILE" />
+                <ScalarProperty Name="CANDIDATE_PROFILE_NAME" ColumnName="CANDIDATE_PROFILE_NAME" />
+                <ScalarProperty Name="ID_STUDENT" ColumnName="ID_STUDENT" />
+                <ScalarProperty Name="ID_PROFILE" ColumnName="ID_PROFILE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CANDIDATETYPEs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.CANDIDATETYPE">
+              <MappingFragment StoreEntitySet="CANDIDATETYPE">
+                <ScalarProperty Name="ID_CANDIDATE" ColumnName="ID_CANDIDATE" />
+                <ScalarProperty Name="CANDIDATENAME" ColumnName="CANDIDATENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COURSEs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.COURSE">
+              <MappingFragment StoreEntitySet="COURSE">
+                <ScalarProperty Name="ID_STUDENT" ColumnName="ID_STUDENT" />
+                <ScalarProperty Name="MATH" ColumnName="MATH" />
+                <ScalarProperty Name="LITERATURE" ColumnName="LITERATURE" />
+                <ScalarProperty Name="INTERVIEW" ColumnName="INTERVIEW" />
+                <ScalarProperty Name="ENGLIST" ColumnName="ENGLIST" />
+                <ScalarProperty Name="GRADE_COMMENT" ColumnName="GRADE_COMMENT" />
+                <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EDUCATIONs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.EDUCATION">
+              <MappingFragment StoreEntitySet="EDUCATION">
+                <ScalarProperty Name="ID_EDUCATION" ColumnName="ID_EDUCATION" />
+                <ScalarProperty Name="EDUCATIONNAME" ColumnName="EDUCATIONNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INPUTs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.INPUT">
+              <MappingFragment StoreEntitySet="INPUT">
+                <ScalarProperty Name="ID_INPUT" ColumnName="ID_INPUT" />
+                <ScalarProperty Name="INPUTNAME" ColumnName="INPUTNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTAKES">
+            <EntityTypeMapping TypeName="QLSaiGonTech.INTAKE">
+              <MappingFragment StoreEntitySet="INTAKES">
+                <ScalarProperty Name="ID_INTAKES" ColumnName="ID_INTAKES" />
+                <ScalarProperty Name="INTAKENAME" ColumnName="INTAKENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROFILETYPEs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.PROFILETYPE">
+              <MappingFragment StoreEntitySet="PROFILETYPE">
+                <ScalarProperty Name="ID_PROFILE" ColumnName="ID_PROFILE" />
+                <ScalarProperty Name="ID_INPUT" ColumnName="ID_INPUT" />
+                <ScalarProperty Name="ID_STATUS" ColumnName="ID_STATUS" />
+                <ScalarProperty Name="ENGLISH_NAME" ColumnName="ENGLISH_NAME" />
+                <ScalarProperty Name="VIETNAMESE_NAME" ColumnName="VIETNAMESE_NAME" />
+                <ScalarProperty Name="SEQUENCE_NUM" ColumnName="SEQUENCE_NUM" />
+                <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEMESTERs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.SEMESTER">
+              <MappingFragment StoreEntitySet="SEMESTER">
+                <ScalarProperty Name="ID_SEMESTER" ColumnName="ID_SEMESTER" />
+                <ScalarProperty Name="ID_ACADEMICYEAR" ColumnName="ID_ACADEMICYEAR" />
+                <ScalarProperty Name="SEMESTER_NAME" ColumnName="SEMESTER_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STAGEs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.STAGE">
+              <MappingFragment StoreEntitySet="STAGE">
+                <ScalarProperty Name="ID_STAGE" ColumnName="ID_STAGE" />
+                <ScalarProperty Name="ID_SEMESTER" ColumnName="ID_SEMESTER" />
+                <ScalarProperty Name="ID_INTAKES" ColumnName="ID_INTAKES" />
+                <ScalarProperty Name="STAGENAME" ColumnName="STAGENAME" />
+                <ScalarProperty Name="ADMISSIONS_DATE" ColumnName="ADMISSIONS_DATE" />
+                <ScalarProperty Name="EXAM_DATE" ColumnName="EXAM_DATE" />
+                <ScalarProperty Name="EXAM_TIME" ColumnName="EXAM_TIME" />
+                <ScalarProperty Name="TIMEOFENGLISHEXAM" ColumnName="TIMEOFENGLISHEXAM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STATUS">
+            <EntityTypeMapping TypeName="QLSaiGonTech.STATUS">
+              <MappingFragment StoreEntitySet="STATUS">
+                <ScalarProperty Name="ID_STATUS" ColumnName="ID_STATUS" />
+                <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STUDENTs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.STUDENT">
+              <MappingFragment StoreEntitySet="STUDENT">
+                <ScalarProperty Name="ID_EDUCATION" ColumnName="ID_EDUCATION" />
+                <ScalarProperty Name="ID_INTAKES" ColumnName="ID_INTAKES" />
+                <ScalarProperty Name="ID_CADIDATE" ColumnName="ID_CADIDATE" />
+                <ScalarProperty Name="ID_PROGRAM" ColumnName="ID_PROGRAM" />
+                <ScalarProperty Name="ID_STUDENT" ColumnName="ID_STUDENT" />
+                <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+                <ScalarProperty Name="WARDS" ColumnName="WARDS" />
+                <ScalarProperty Name="DISTRICT" ColumnName="DISTRICT" />
+                <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+                <ScalarProperty Name="NATION" ColumnName="NATION" />
+                <ScalarProperty Name="PLACEOFBIRTH" ColumnName="PLACEOFBIRTH" />
+                <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+                <ScalarProperty Name="HOMEPHONE" ColumnName="HOMEPHONE" />
+                <ScalarProperty Name="HIGHSCHOOLNAME" ColumnName="HIGHSCHOOLNAME" />
+                <ScalarProperty Name="HIGHSCHOOLCITY" ColumnName="HIGHSCHOOLCITY" />
+                <ScalarProperty Name="GRADUATEYEAR" ColumnName="GRADUATEYEAR" />
+                <ScalarProperty Name="HOMECOUNTRY" ColumnName="HOMECOUNTRY" />
+                <ScalarProperty Name="REGISTRYDATE" ColumnName="REGISTRYDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STUDYPROGRAMs">
+            <EntityTypeMapping TypeName="QLSaiGonTech.STUDYPROGRAM">
+              <MappingFragment StoreEntitySet="STUDYPROGRAM">
+                <ScalarProperty Name="ID_PROGRAM" ColumnName="ID_PROGRAM" />
+                <ScalarProperty Name="PROGRAMS_NAME" ColumnName="PROGRAMS_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QLSaiGonTech.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YEARS">
+            <EntityTypeMapping TypeName="QLSaiGonTech.YEAR">
+              <MappingFragment StoreEntitySet="YEARS">
+                <ScalarProperty Name="ID_YEAR" ColumnName="ID_YEAR" />
+                <ScalarProperty Name="YEARS_NAME" ColumnName="YEARS_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

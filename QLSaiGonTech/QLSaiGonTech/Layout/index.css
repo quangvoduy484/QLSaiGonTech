@@ -1,0 +1,19 @@
+﻿                .menu-option ul >li:hover a
+       {
+                color: #fff;
+                background: #1e282c;
+       }
+       .menu-option a
+       {
+                color: #b8c7ce;
+       }
+       .row
+       {
+               height: 100vh ;
+       }
+       .menu-option >ul
+       {
+
+                height: 100%;
+       }
+      

@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FCE26C53-527A-4DF7-B0A5-4CC32903BAE9}</ProjectGuid>
+    <ProjectGuid>{D792601F-7068-4557-80D1-D5D1E677FA3E}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,12 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -114,10 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CandidateTypeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CandidateType.cs" />
+    <Compile Include="Models\CanididateClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,11 +121,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Layout\index.css" />
+    <Content Include="Libary\css\bootstrap-grid.css" />
+    <Content Include="Libary\css\bootstrap-grid.min.css" />
+    <Content Include="Libary\css\bootstrap-reboot.css" />
+    <Content Include="Libary\css\bootstrap-reboot.min.css" />
+    <Content Include="Libary\css\bootstrap.css" />
+    <Content Include="Libary\css\bootstrap.min.css" />
+    <Content Include="Libary\css\font-awesome.css" />
+    <Content Include="Libary\css\font-awesome.min.css" />
+    <Content Include="Libary\fonts\fontawesome-webfont.svg" />
+    <Content Include="Libary\img\icon_delete.png" />
+    <Content Include="Libary\img\update.png" />
+    <Content Include="Libary\js\bootstrap.bundle.js" />
+    <Content Include="Libary\js\bootstrap.bundle.min.js" />
+    <Content Include="Libary\js\bootstrap.js" />
+    <Content Include="Libary\js\bootstrap.min.js" />
+    <Content Include="Libary\js\jquery-3.3.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -138,16 +146,39 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CandidateType\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libary\css\.DS_Store" />
+    <Content Include="Libary\css\bootstrap-grid.css.map" />
+    <Content Include="Libary\css\bootstrap-grid.min.css.map" />
+    <Content Include="Libary\css\bootstrap-reboot.css.map" />
+    <Content Include="Libary\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Libary\css\bootstrap.css.map" />
+    <Content Include="Libary\css\bootstrap.min.css.map" />
+    <Content Include="Libary\js\bootstrap.bundle.js.map" />
+    <Content Include="Libary\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Libary\js\bootstrap.js.map" />
+    <Content Include="Libary\js\bootstrap.min.js.map" />
+    <Content Include="Libary\js\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libary\fonts\fontawesome-webfont.eot" />
+    <Content Include="Libary\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Libary\fonts\fontawesome-webfont.woff" />
+    <Content Include="Libary\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Libary\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CandidateType\Create.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

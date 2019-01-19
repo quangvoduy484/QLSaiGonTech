@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6f6bc19ae5404b2788746bc78c2716d8" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="QLSaiGonTech.ACADEMICYEAR" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.CANDIDATEPROFILE" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.CANDIDATETYPE" Width="1.5" PointX="3.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.COURSE" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.EDUCATION" Width="1.5" PointX="3.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.INPUT" Width="1.5" PointX="3.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.INTAKE" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.PROFILETYPE" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.SEMESTER" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.STAGE" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.STATUS" Width="1.5" PointX="3.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.STUDENT" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.STUDYPROGRAM" Width="1.5" PointX="3.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.sysdiagram" Width="1.5" PointX="7.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSaiGonTech.YEAR" Width="1.5" PointX="1.5" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="QLSaiGonTech.FK_ACADEMIDYER_YEARS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_SEMESTER_ACADEMICYEAR" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_CANDIDATEPROFILE_PROFILE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_CANDIDATEPROFILE_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_COURSE_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_STUDENT_EDUCATION" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_PROFILE_INPUT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_STAGE_INTAKES" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_STUDENT_INTAKES" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_PROFILE_STATUS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_STAGE_SEMESTER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSaiGonTech.FK_STUDENT_STUDYPROGRAM" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

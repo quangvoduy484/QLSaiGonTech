@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSaiGonTech", "QLSaiGonTech\QLSaiGonTech.csproj", "{FCE26C53-527A-4DF7-B0A5-4CC32903BAE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSaiGonTechAPI", "QLSaiGonTechAPI\QLSaiGonTechAPI.csproj", "{A4ACC691-03A2-4B36-9C3C-8101A235F2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSaiGonTech", "QLSaiGonTech\QLSaiGonTech.csproj", "{D792601F-7068-4557-80D1-D5D1E677FA3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FCE26C53-527A-4DF7-B0A5-4CC32903BAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCE26C53-527A-4DF7-B0A5-4CC32903BAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCE26C53-527A-4DF7-B0A5-4CC32903BAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCE26C53-527A-4DF7-B0A5-4CC32903BAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4ACC691-03A2-4B36-9C3C-8101A235F2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4ACC691-03A2-4B36-9C3C-8101A235F2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4ACC691-03A2-4B36-9C3C-8101A235F2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4ACC691-03A2-4B36-9C3C-8101A235F2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D792601F-7068-4557-80D1-D5D1E677FA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D792601F-7068-4557-80D1-D5D1E677FA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D792601F-7068-4557-80D1-D5D1E677FA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D792601F-7068-4557-80D1-D5D1E677FA3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

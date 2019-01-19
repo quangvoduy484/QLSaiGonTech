@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLSaiGonTechStoreContainer" CdmEntityContainer="DB_QLSaiGonTech">
+    <EntitySetMapping Name="ACADEMICYEARs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.ACADEMICYEAR">
+        <MappingFragment StoreEntitySet="ACADEMICYEAR">
+          <ScalarProperty Name="ID_ACADEMICYEAR" ColumnName="ID_ACADEMICYEAR" />
+          <ScalarProperty Name="ID_YEAR" ColumnName="ID_YEAR" />
+          <ScalarProperty Name="ACADEMICNAME" ColumnName="ACADEMICNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANDIDATEPROFILEs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.CANDIDATEPROFILE">
+        <MappingFragment StoreEntitySet="CANDIDATEPROFILE">
+          <ScalarProperty Name="ID_CANDIDATEPROFILE" ColumnName="ID_CANDIDATEPROFILE" />
+          <ScalarProperty Name="CANDIDATE_PROFILE_NAME" ColumnName="CANDIDATE_PROFILE_NAME" />
+          <ScalarProperty Name="ID_STUDENT" ColumnName="ID_STUDENT" />
+          <ScalarProperty Name="ID_PROFILE" ColumnName="ID_PROFILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANDIDATETYPEs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.CANDIDATETYPE">
+        <MappingFragment StoreEntitySet="CANDIDATETYPE">
+          <ScalarProperty Name="ID_CANDIDATE" ColumnName="ID_CANDIDATE" />
+          <ScalarProperty Name="CANDIDATENAME" ColumnName="CANDIDATENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURSEs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.COURSE">
+        <MappingFragment StoreEntitySet="COURSE">
+          <ScalarProperty Name="ID_STUDENT" ColumnName="ID_STUDENT" />
+          <ScalarProperty Name="MATH" ColumnName="MATH" />
+          <ScalarProperty Name="LITERATURE" ColumnName="LITERATURE" />
+          <ScalarProperty Name="INTERVIEW" ColumnName="INTERVIEW" />
+          <ScalarProperty Name="ENGLIST" ColumnName="ENGLIST" />
+          <ScalarProperty Name="GRADE_COMMENT" ColumnName="GRADE_COMMENT" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDUCATIONs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.EDUCATION">
+        <MappingFragment StoreEntitySet="EDUCATION">
+          <ScalarProperty Name="ID_EDUCATION" ColumnName="ID_EDUCATION" />
+          <ScalarProperty Name="EDUCATIONNAME" ColumnName="EDUCATIONNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INPUTs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.INPUT">
+        <MappingFragment StoreEntitySet="INPUT">
+          <ScalarProperty Name="ID_INPUT" ColumnName="ID_INPUT" />
+          <ScalarProperty Name="INPUTNAME" ColumnName="INPUTNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INTAKES">
+      <EntityTypeMapping TypeName="QLSaiGonTech.INTAKE">
+        <MappingFragment StoreEntitySet="INTAKES">
+          <ScalarProperty Name="ID_INTAKES" ColumnName="ID_INTAKES" />
+          <ScalarProperty Name="INTAKENAME" ColumnName="INTAKENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROFILETYPEs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.PROFILETYPE">
+        <MappingFragment StoreEntitySet="PROFILETYPE">
+          <ScalarProperty Name="ID_PROFILE" ColumnName="ID_PROFILE" />
+          <ScalarProperty Name="ID_INPUT" ColumnName="ID_INPUT" />
+          <ScalarProperty Name="ID_STATUS" ColumnName="ID_STATUS" />
+          <ScalarProperty Name="ENGLISH_NAME" ColumnName="ENGLISH_NAME" />
+          <ScalarProperty Name="VIETNAMESE_NAME" ColumnName="VIETNAMESE_NAME" />
+          <ScalarProperty Name="SEQUENCE_NUM" ColumnName="SEQUENCE_NUM" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEMESTERs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.SEMESTER">
+        <MappingFragment StoreEntitySet="SEMESTER">
+          <ScalarProperty Name="ID_SEMESTER" ColumnName="ID_SEMESTER" />
+          <ScalarProperty Name="ID_ACADEMICYEAR" ColumnName="ID_ACADEMICYEAR" />
+          <ScalarProperty Name="SEMESTER_NAME" ColumnName="SEMESTER_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAGEs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.STAGE">
+        <MappingFragment StoreEntitySet="STAGE">
+          <ScalarProperty Name="ID_STAGE" ColumnName="ID_STAGE" />
+          <ScalarProperty Name="ID_SEMESTER" ColumnName="ID_SEMESTER" />
+          <ScalarProperty Name="ID_INTAKES" ColumnName="ID_INTAKES" />
+          <ScalarProperty Name="STAGENAME" ColumnName="STAGENAME" />
+          <ScalarProperty Name="ADMISSIONS_DATE" ColumnName="ADMISSIONS_DATE" />
+          <ScalarProperty Name="EXAM_DATE" ColumnName="EXAM_DATE" />
+          <ScalarProperty Name="EXAM_TIME" ColumnName="EXAM_TIME" />
+          <ScalarProperty Name="TIMEOFENGLISHEXAM" ColumnName="TIMEOFENGLISHEXAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STATUS">
+      <EntityTypeMapping TypeName="QLSaiGonTech.STATUS">
+        <MappingFragment StoreEntitySet="STATUS">
+          <ScalarProperty Name="ID_STATUS" ColumnName="ID_STATUS" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENTs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.STUDENT">
+        <MappingFragment StoreEntitySet="STUDENT">
+          <ScalarProperty Name="ID_EDUCATION" ColumnName="ID_EDUCATION" />
+          <ScalarProperty Name="ID_INTAKES" ColumnName="ID_INTAKES" />
+          <ScalarProperty Name="ID_CADIDATE" ColumnName="ID_CADIDATE" />
+          <ScalarProperty Name="ID_PROGRAM" ColumnName="ID_PROGRAM" />
+          <ScalarProperty Name="ID_STUDENT" ColumnName="ID_STUDENT" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="WARDS" ColumnName="WARDS" />
+          <ScalarProperty Name="DISTRICT" ColumnName="DISTRICT" />
+          <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+          <ScalarProperty Name="NATION" ColumnName="NATION" />
+          <ScalarProperty Name="PLACEOFBIRTH" ColumnName="PLACEOFBIRTH" />
+          <ScalarProperty Name="MARITAL_STATUS" ColumnName="MARITAL_STATUS" />
+          <ScalarProperty Name="HOMEPHONE" ColumnName="HOMEPHONE" />
+          <ScalarProperty Name="HIGHSCHOOLNAME" ColumnName="HIGHSCHOOLNAME" />
+          <ScalarProperty Name="HIGHSCHOOLCITY" ColumnName="HIGHSCHOOLCITY" />
+          <ScalarProperty Name="GRADUATEYEAR" ColumnName="GRADUATEYEAR" />
+          <ScalarProperty Name="HOMECOUNTRY" ColumnName="HOMECOUNTRY" />
+          <ScalarProperty Name="REGISTRYDATE" ColumnName="REGISTRYDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDYPROGRAMs">
+      <EntityTypeMapping TypeName="QLSaiGonTech.STUDYPROGRAM">
+        <MappingFragment StoreEntitySet="STUDYPROGRAM">
+          <ScalarProperty Name="ID_PROGRAM" ColumnName="ID_PROGRAM" />
+          <ScalarProperty Name="PROGRAMS_NAME" ColumnName="PROGRAMS_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLSaiGonTech.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YEARS">
+      <EntityTypeMapping TypeName="QLSaiGonTech.YEAR">
+        <MappingFragment StoreEntitySet="YEARS">
+          <ScalarProperty Name="ID_YEAR" ColumnName="ID_YEAR" />
+          <ScalarProperty Name="YEARS_NAME" ColumnName="YEARS_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

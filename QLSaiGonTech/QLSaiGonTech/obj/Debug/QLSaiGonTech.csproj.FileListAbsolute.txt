@@ -1,7 +1,5 @@
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\QLSaiGonTech.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\QLSaiGonTech.pdb
-C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\EntityFramework.dll
-C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\EntityFramework.SqlServer.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\Newtonsoft.Json.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.dll
@@ -12,8 +10,6 @@ C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.We
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Deployment.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Razor.dll
-C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\EntityFramework.xml
-C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\EntityFramework.SqlServer.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\Newtonsoft.Json.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.WebRequest.xml
@@ -23,6 +19,5 @@ C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.We
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Deployment.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Razor.xml
-C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.csprojResolveAssemblyReference.cache
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.pdb
