@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QL_KYTHIModelStoreContainer" CdmEntityContainer="DB_QLSaiGonTech">
+    <EntitySetMapping Name="CANDIDATETYPEs">
+      <EntityTypeMapping TypeName="QL_KYTHIModel.CANDIDATETYPE">
+        <MappingFragment StoreEntitySet="CANDIDATETYPE">
+          <ScalarProperty Name="ID_CANDIDATE" ColumnName="ID_CANDIDATE" />
+          <ScalarProperty Name="CANDIDATENAME" ColumnName="CANDIDATENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

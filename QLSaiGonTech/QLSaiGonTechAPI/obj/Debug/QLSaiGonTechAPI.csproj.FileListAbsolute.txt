@@ -25,6 +25,5 @@ C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\bin\System
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\bin\System.Web.WebPages.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\bin\System.Web.WebPages.Deployment.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\bin\System.Web.WebPages.Razor.xml
-C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\obj\Debug\QLSaiGonTechAPI.csprojResolveAssemblyReference.cache
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\obj\Debug\QLSaiGonTechAPI.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTechAPI\obj\Debug\QLSaiGonTechAPI.pdb

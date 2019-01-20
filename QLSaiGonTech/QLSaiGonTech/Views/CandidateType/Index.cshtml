@@ -88,8 +88,8 @@
                                                         <td>@cn.CANDIDATENAME</td>
                                                       
                                                         <td>
-                                                              <a href='@Url.Action("Delete", "CandidateType", new { id=cn.ID_CANDIDATE })'>Delete</a>
-                                                               
+                                                              <a onclick="return confirm('Are you sure?')" href='@Url.Action("Delete", "CandidateType", new { id=cn.ID_CANDIDATE })'>Delete</a> |
+                                                               <a  href='@Url.Action("Edit", "CandidateType", new { id=cn.ID_CANDIDATE })'>Edit</a>
                                                         </td>
                                                    </tr>
                                                    

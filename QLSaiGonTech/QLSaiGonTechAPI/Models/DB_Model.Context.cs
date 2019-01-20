@@ -25,20 +25,6 @@ namespace QLSaiGonTechAPI.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<ACADEMICYEAR> ACADEMICYEARs { get; set; }
-        public DbSet<CANDIDATEPROFILE> CANDIDATEPROFILEs { get; set; }
         public DbSet<CANDIDATETYPE> CANDIDATETYPEs { get; set; }
-        public DbSet<COURSE> COURSEs { get; set; }
-        public DbSet<EDUCATION> EDUCATIONs { get; set; }
-        public DbSet<INPUT> INPUTs { get; set; }
-        public DbSet<INTAKE> INTAKES { get; set; }
-        public DbSet<PROFILETYPE> PROFILETYPEs { get; set; }
-        public DbSet<SEMESTER> SEMESTERs { get; set; }
-        public DbSet<STAGE> STAGEs { get; set; }
-        public DbSet<STATUS> STATUS { get; set; }
-        public DbSet<STUDENT> STUDENTs { get; set; }
-        public DbSet<STUDYPROGRAM> STUDYPROGRAMs { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
-        public DbSet<YEAR> YEARS { get; set; }
     }
 }

@@ -133,65 +133,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ACADEMICYEAR.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CANDIDATEPROFILE.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\CANDIDATETYPE.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
+      <DependentUpon>DB_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\COURSE.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DBSaiGonTech.Context.cs">
+    <Compile Include="Models\DB_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSaiGonTech.Context.tt</DependentUpon>
+      <DependentUpon>DB_Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSaiGonTech.cs">
+    <Compile Include="Models\DB_Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
+      <DependentUpon>DB_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBSaiGonTech.Designer.cs">
+    <Compile Include="Models\DB_Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBSaiGonTech.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EDUCATION.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\INPUT.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\INTAKE.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PROFILETYPE.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SEMESTER.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\STAGE.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\STATUS.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\STUDENT.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\STUDYPROGRAM.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\YEAR.cs">
-      <DependentUpon>DBSaiGonTech.tt</DependentUpon>
+      <DependentUpon>DB_Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -252,22 +210,22 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="Models\DBSaiGonTech.edmx">
+    <EntityDeploy Include="Models\DB_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBSaiGonTech.Designer.cs</LastGenOutput>
+      <LastGenOutput>DB_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DBSaiGonTech.Context.tt">
+    <Content Include="Models\DB_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBSaiGonTech.edmx</DependentUpon>
-      <LastGenOutput>DBSaiGonTech.Context.cs</LastGenOutput>
+      <DependentUpon>DB_Model.edmx</DependentUpon>
+      <LastGenOutput>DB_Model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBSaiGonTech.edmx.diagram">
-      <DependentUpon>DBSaiGonTech.edmx</DependentUpon>
+    <Content Include="Models\DB_Model.edmx.diagram">
+      <DependentUpon>DB_Model.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\DBSaiGonTech.tt">
+    <Content Include="Models\DB_Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBSaiGonTech.edmx</DependentUpon>
-      <LastGenOutput>DBSaiGonTech.cs</LastGenOutput>
+      <DependentUpon>DB_Model.edmx</DependentUpon>
+      <LastGenOutput>DB_Model.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

@@ -81,6 +81,27 @@ namespace QLSaiGonTech.Models
             }
 
         }
+        public bool Edit(CandidateType candidateType)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(BASE_URL);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                // yêu cầu lấy giá trị trả về từ api 
+                HttpResponseMessage response = client.PutAsJsonAsync("CandidateType/"+candidateType.ID_CANDIDATE, candidateType).Result;
+
+                return response.IsSuccessStatusCode;
+
+            }
+            catch
+            {
+                return false;
+
+            }
+
+        }
         public bool Delete(string id)
         {
             try

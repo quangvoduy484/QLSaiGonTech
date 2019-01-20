@@ -14,14 +14,7 @@ namespace QLSaiGonTechAPI.Models
     
     public partial class CANDIDATETYPE
     {
-        public CANDIDATETYPE()
-        {
-            this.STUDENTs = new HashSet<STUDENT>();
-        }
-    
         public string ID_CANDIDATE { get; set; }
         public string CANDIDATENAME { get; set; }
-    
-        public virtual ICollection<STUDENT> STUDENTs { get; set; }
     }
 }

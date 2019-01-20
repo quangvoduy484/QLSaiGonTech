@@ -20,6 +20,7 @@ namespace QLSaiGonTech.Controllers
 
             return View();
         }
+        //Create
         [HttpGet]
         public ActionResult Create()
         {
@@ -38,13 +39,30 @@ namespace QLSaiGonTech.Controllers
 
         }
       
-
+        // Xóa
         public ActionResult Delete(string id)
         {
-            id = id.Substring(0, 3);
+           
             pr.Delete(id);
             return RedirectToAction("Index");
         }
+        //Update
+        [HttpGet]
+        public ActionResult Edit(string id)
+        {
+            CandidateType candidate = pr.finID(id);
+
+            return View("Edit", candidate);
+
+        }
+        [HttpPost]
+        public ActionResult Edit(CandidateType candidateType)
+        {
+            pr.Edit(candidateType);
+            return RedirectToAction("Index");
+
+        }
+
 
     }
 }

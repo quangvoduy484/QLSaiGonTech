@@ -29,12 +29,8 @@
       <End Role="CANDIDATEPROFILE" EntitySet="CANDIDATEPROFILEs" />
     </AssociationSet>
     <AssociationSet Name="FK_CANDIDATEPROFILE_STUDENT" Association="QLSaiGonTech.FK_CANDIDATEPROFILE_STUDENT">
-      <End Role="STUDENT" EntitySet="STUDENTs" />
-      <End Role="CANDIDATEPROFILE" EntitySet="CANDIDATEPROFILEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_STUDENT_CANDIDATETYPE" Association="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE">
-      <End Role="CANDIDATETYPE" EntitySet="CANDIDATETYPEs" />
-      <End Role="STUDENT" EntitySet="STUDENTs" />
+      <End EntitySet="STUDENTs" Role="STUDENT" />
+      <End EntitySet="CANDIDATEPROFILEs" Role="CANDIDATEPROFILE" />
     </AssociationSet>
     <AssociationSet Name="FK_COURSE_STUDENT" Association="QLSaiGonTech.FK_COURSE_STUDENT">
       <End Role="STUDENT" EntitySet="STUDENTs" />
@@ -96,7 +92,6 @@
     </Key>
     <Property Name="ID_CANDIDATE" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
     <Property Name="CANDIDATENAME" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="STUDENTs" Relationship="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE" FromRole="CANDIDATETYPE" ToRole="STUDENT" />
   </EntityType>
   <EntityType Name="COURSE">
     <Key>
@@ -211,7 +206,6 @@
     <Property Name="HOMECOUNTRY" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="REGISTRYDATE" Type="DateTime" Precision="0" />
     <NavigationProperty Name="CANDIDATEPROFILEs" Relationship="QLSaiGonTech.FK_CANDIDATEPROFILE_STUDENT" FromRole="STUDENT" ToRole="CANDIDATEPROFILE" />
-    <NavigationProperty Name="CANDIDATETYPE" Relationship="QLSaiGonTech.FK_STUDENT_CANDIDATETYPE" FromRole="STUDENT" ToRole="CANDIDATETYPE" />
     <NavigationProperty Name="COURSE" Relationship="QLSaiGonTech.FK_COURSE_STUDENT" FromRole="STUDENT" ToRole="COURSE" />
     <NavigationProperty Name="EDUCATION" Relationship="QLSaiGonTech.FK_STUDENT_EDUCATION" FromRole="STUDENT" ToRole="EDUCATION" />
     <NavigationProperty Name="INTAKE" Relationship="QLSaiGonTech.FK_STUDENT_INTAKES" FromRole="STUDENT" ToRole="INTAKES" />
@@ -280,26 +274,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CANDIDATEPROFILE_STUDENT">
-    <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="0..1" />
-    <End Role="CANDIDATEPROFILE" Type="QLSaiGonTech.CANDIDATEPROFILE" Multiplicity="*" />
+    <End Type="QLSaiGonTech.STUDENT" Multiplicity="0..1" Role="STUDENT" />
+    <End Type="QLSaiGonTech.CANDIDATEPROFILE" Multiplicity="*" Role="CANDIDATEPROFILE" />
     <ReferentialConstraint>
       <Principal Role="STUDENT">
         <PropertyRef Name="ID_STUDENT" />
       </Principal>
       <Dependent Role="CANDIDATEPROFILE">
         <PropertyRef Name="ID_STUDENT" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_STUDENT_CANDIDATETYPE">
-    <End Role="CANDIDATETYPE" Type="QLSaiGonTech.CANDIDATETYPE" Multiplicity="0..1" />
-    <End Role="STUDENT" Type="QLSaiGonTech.STUDENT" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CANDIDATETYPE">
-        <PropertyRef Name="ID_CANDIDATE" />
-      </Principal>
-      <Dependent Role="STUDENT">
-        <PropertyRef Name="ID_CADIDATE" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

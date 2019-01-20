@@ -21,3 +21,4 @@ C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.We
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Razor.xml
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.pdb
+C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.csprojResolveAssemblyReference.cache
