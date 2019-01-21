@@ -13,6 +13,7 @@ namespace QLSaiGonTech.Models
     public class CanididateClient
     {
         private string BASE_URL = "http://localhost:10526/api/";
+
         public IEnumerable<CandidateType> finAll()
         {
             try
