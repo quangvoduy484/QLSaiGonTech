@@ -22,3 +22,36 @@ C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.We
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.dll
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.pdb
 C:\Users\quangduyvo\Desktop\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.csprojResolveAssemblyReference.cache
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\QLSaiGonTech.dll.config
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\QLSaiGonTech.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\QLSaiGonTech.pdb
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\Newtonsoft.Json.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.Formatting.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.WebRequest.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Helpers.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Http.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Http.WebHost.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Mvc.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Razor.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Deployment.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Razor.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\Newtonsoft.Json.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.Formatting.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Net.Http.WebRequest.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Helpers.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Http.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Http.WebHost.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Mvc.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.Razor.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Deployment.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\bin\System.Web.WebPages.Razor.xml
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.csprojAssemblyReference.cache
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.csproj.CoreCompileInputs.cache
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.csproj.CopyComplete
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.dll
+C:\Users\isc\Desktop\New folder\QLSaiGonTech\QLSaiGonTech\QLSaiGonTech\obj\Debug\QLSaiGonTech.pdb
