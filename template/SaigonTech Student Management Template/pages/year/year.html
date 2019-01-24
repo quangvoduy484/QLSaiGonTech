@@ -175,16 +175,79 @@
           </li>
         </ul>
       </nav>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <div class="main-panel">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Year List</li>
+          </ol>
+        </nav>
+        <div class="content-wrapper">
+          <!-- NỘI DUNG -->
+          <div class="content col-sm-8 col-md-9 .col-xl-10 col-lg-10" style="padding:20px">
+            <a href="AddYear.html">ADD new Year</a>
+            <table class="table table-bordered table-hover">
+              <thead class="bg-info">
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Design</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>ID_1</td>
+                  <td>2017</td>
+                  <td>
+                    <a onclick="return confirm('Are you sure?')" href="#">Delete</a>
+                    |
+                    <a href="EditYear.html">Edit</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">2</th>
+                  <td>ID_2</td>
+                  <td>2018</td>
+                  <td>
+                    <a onclick="return confirm('Are you sure?')" href="#">Delete</a>
+                    |
+                    <a href="EditStage.html">Edit</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">3</th>
+                  <td>ID_3</td>
+                  <td>2019</td>
+                  <td>
+                    <a onclick="return confirm('Are you sure?')" href="#">Delete</a>
+                    |
+                    <a href="EditStage.html">Edit</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="container-fluid clearfix">
-            
-          </div>
-        </footer>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
+        <div class="footer-fixed">
+          <footer class="footer">
+            <div class="container-fluid clearfix">
+
+            </div>
+          </footer>
+        </div>
+        <!-- partial -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
   </div>
   <!-- plugins:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
