@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="../../vendors/iconfonts/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.addons.css">
+  
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
+  <!-- <link rel="stylesheet" href="../../css/font-awesome.min.css"> -->
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -175,16 +177,153 @@
           </li>
         </ul>
       </nav>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="container-fluid clearfix">
-            
-          </div>
-        </footer>
+        <!-- content-wrapper ends -->    
+        
     <!-- page-body-wrapper ends -->
+    <div class="col">      
+      <div class="card">
+          <div class="card-header text-dark">
+              Intake                           
+              <div class="ml-auto d-inline float-right">
+                <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addintake">Add</button>
+              </div>
+
+              <!-- add -->
+              <div class="modal fade" id="addintake" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Intake</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <form>
+                              <div class="form-group">
+                                <label for="name">ID</label>
+                                <input type="text" class="form-control" id="idintake" placeholder="Enter id intake">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name intake">
+                              </div>                               
+                              
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- edit -->
+                <div class="modal fade" id="editintake" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit Intake</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <form>
+                              <div class="form-group">
+                                <label for="name">ID</label>
+                                <input type="text" value="ID-01" class="form-control" id="idintake" placeholder="Enter id intake">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="text" value="SGT-01" class="form-control" id="exampleInputEmail1" placeholder="Enter name intake">
+                              </div>                               
+                              
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Update</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- delete -->
+                <div class="modal fade" id="deleteintake" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delate Intake</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <form>
+                              <div class="form-group">
+                                <label for="name">ID</label>
+                                <input type="text" value="ID-01" class="form-control" id="idintake" placeholder="Enter id intake">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="text" value="SGT-01" class="form-control" id="exampleInputEmail1" placeholder="Enter name intake">
+                              </div>                              
+                          </form>
+                          <p class="text-danger">Are you sure delete intake?</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+          </div>
+          <div class="card-body table-responsive">
+              <table class="table table-striped">
+                  <thead >
+                      <tr>
+                      <th scope="col">No.</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>                     
+                      <th scope="col">Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                      <th scope="row">1</th>
+                      <td>ID-01</td>
+                      <td>SGT-01</td>                      
+                      <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake" data-toggle="modal" class="text-danger">Delete</a></td>
+                  </tr>
+                      <tr>
+                      <th scope="row">2</th>
+                      <td>ID-02</td>
+                      <td>SGT-02</td>                      
+                      <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake" data-toggle="modal" class="text-danger">Delete</a></td>
+                      </tr>
+                      <tr>
+                      <th scope="row">3</th>
+                      <td>ID-03</td>
+                      <td>SGT-03</td>                      
+                      <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake" data-toggle="modal" class="text-danger">Delete</a></td>
+                      </tr>
+                      <tr>
+                      <th scope="row">4</th>
+                      <td>ID-04</td>
+                      <td>SGT-04</td>                      
+                      <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake" data-toggle="modal" class="text-danger">Delete</a></td>
+                      </tr>                      
+                  </tbody>
+                  </table>                             
+          </div>
+        </div>
+    </div>
   </div>
   <!-- container-scroller -->
+  
   </div>
   <!-- plugins:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
@@ -200,5 +339,10 @@
   <script src="../../js/dashboard.js"></script>
   <!-- End custom js for this page-->
 </body>
-
+<!-- partial:partials/_footer.html -->
+<footer class="footer">
+  <div class="container-fluid clearfix">
+	
+  </div>
+</footer>
 </html>
