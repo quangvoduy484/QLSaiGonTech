@@ -1,0 +1,16 @@
+.content-main {
+    width: 75%;
+}
+
+thead {
+    background-color: #1E7BCB;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+      max-width: 50%; } 
+}
+
+.card-header h3 {
+    text-align: center;
+}
