@@ -16302,3 +16302,13 @@ ul {
     border-left: 3px solid rgba(255, 255, 255, 0.2); } }
 
 /*# sourceMappingURL=maps/style.css.map */
+.main{
+  width: 100%;
+}
+.bttn{
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+.bg-color{
+  background: #1E7BCB;
+}
