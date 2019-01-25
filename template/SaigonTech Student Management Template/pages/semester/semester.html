@@ -178,23 +178,169 @@
       <!-- content-wrapper ends -->
       <!-- partial:partials/_footer.html -->
       <div class="main-panel">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Semester List</li>
-          </ol>
-        </nav>
-        <div class="content-wrapper">
-          <!-- NỘI DUNG -->
-          <div class="content col-sm-8 col-md-9 .col-xl-10 col-lg-10" style="padding:20px">
-            <a href="AddSemester.html">ADD new Semester</a>
-            <table class="table table-bordered table-hover">
-              <thead class="bg-info">
+        <div class="card">
+          <div class="card-header text-dark">
+            Semester
+            <div class="ml-auto d-inline float-right">
+              <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addSemester">Add</button>
+            </div>
+
+            <!-- add -->
+            <div class="modal fade" id="addSemester" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Semester</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">ID</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-key-plus"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="ID_03" readonly>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">Semester Name</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-alphabetical"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- edit -->
+            <div class="modal fade" id="editSemester" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Semester</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">ID</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-key-plus"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="ID_03" readonly>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">Semester Name</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-alphabetical"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- delete -->
+            <div class="modal fade" id="deleteSemester" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Semester</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">ID</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-key-plus"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="ID_03" readonly>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">Semester Name</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-alphabetical"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <p class="text-danger">Are you sure delete Semester?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-striped">
+              <thead class="bg-color">
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">ID</th>
                   <th scope="col">Semester Name</th>
-                  <th scope="col">Design</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -202,46 +348,12 @@
                   <th scope="row">1</th>
                   <td>ID_1</td>
                   <td>Spring</td>
-                  <td>
-                    <a onclick="return confirm('Are you sure?')" href="#">Delete</a>
-                    |
-                    <a href="EditSemester.html">Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">2</th>
-                  <td>ID_2</td>
-                  <td>Summer</td>
-                  <td>
-                    <a onclick="return confirm('Are you sure?')" href="#">Delete</a>
-                    |
-                    <a href="EditStage.html">Edit</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">3</th>
-                  <td>ID_3</td>
-                  <td>Autumn</td>
-                  <td>
-                    <a onclick="return confirm('Are you sure?')" href="#">Delete</a>
-                    |
-                    <a href="EditStage.html">Edit</a>
-                  </td>
+                  <td><a href="" data-target="#editSemester" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteSemester"
+                      data-toggle="modal" class="text-danger">Delete</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <div class="footer-fixed">
-          <footer class="footer">
-            <div class="container-fluid clearfix">
-
-            </div>
-          </footer>
         </div>
         <!-- partial -->
       </div>
