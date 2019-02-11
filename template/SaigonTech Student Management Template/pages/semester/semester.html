@@ -200,19 +200,6 @@
                     <form>
                       <div class="form-row">
                         <div class="form-group col-md">
-                          <label for="inputDateTime">ID</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <i class="mdi mdi-key-plus"></i>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="ID_03" readonly>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md">
                           <label for="inputDateTime">Semester Name</label>
                           <div class="input-group mb-2">
                             <div class="input-group-prepend">
@@ -246,19 +233,6 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">ID</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <i class="mdi mdi-key-plus"></i>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="ID_03" readonly>
-                          </div>
-                        </div>
-                      </div>
                       <div class="form-row">
                         <div class="form-group col-md">
                           <label for="inputDateTime">Semester Name</label>
@@ -297,19 +271,6 @@
                     <form>
                       <div class="form-row">
                         <div class="form-group col-md">
-                          <label for="inputDateTime">ID</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <i class="mdi mdi-key-plus"></i>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="ID_03" readonly>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md">
                           <label for="inputDateTime">Semester Name</label>
                           <div class="input-group mb-2">
                             <div class="input-group-prepend">
@@ -331,14 +292,46 @@
                 </div>
               </div>
             </div>
-
+            <!-- Details -->
+            <div class="modal fade" id="detailSemester" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Semester</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md">
+                          <label for="inputDateTime">Semester Name</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <i class="mdi mdi-alphabetical"></i>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name" disabled>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="card-body table-responsive">
             <table class="table table-striped">
               <thead class="bg-color">
                 <tr>
                   <th scope="col">No.</th>
-                  <th scope="col">ID</th>
                   <th scope="col">Semester Name</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -346,10 +339,10 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td>ID_1</td>
                   <td>Spring</td>
-                  <td><a href="" data-target="#editSemester" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteSemester"
-                      data-toggle="modal" class="text-danger">Delete</a></td>
+                  <td><a href="" data-target="#detailSemester" data-toggle="modal" class="text-warning">Details</a>
+                    | <a href="" data-target="#editSemester" data-toggle="modal">Edit</a>
+                    | <a href="" data-target="#deleteSemester" data-toggle="modal" class="text-danger">Delete</a></td>
                 </tr>
               </tbody>
             </table>

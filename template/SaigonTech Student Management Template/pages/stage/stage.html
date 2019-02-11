@@ -226,7 +226,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019">
+                            <input type="date" class="form-control" id="inputDateTime">
                           </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -237,7 +237,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019">
+                            <input type="date" class="form-control" id="inputExamDate">
                           </div>
                         </div>
                       </div>
@@ -302,7 +302,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019">
+                            <input type="date" class="form-control" id="inputDateTime">
                           </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -313,7 +313,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019">
+                            <input type="date" class="form-control" id="inputExamDate">
                           </div>
                         </div>
                       </div>
@@ -379,7 +379,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019">
+                            <input type="date" class="form-control" id="inputDateTime">
                           </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -390,7 +390,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019">
+                            <input type="date" class="form-control" id="inputExamDate">
                           </div>
                         </div>
                       </div>
@@ -420,7 +420,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New Stage</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Stage</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -430,18 +430,18 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1">
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1" disabled>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputSemester">Semester</label>
-                          <select id="inputSemester" class="form-control">
+                          <select id="inputSemester" class="form-control" disabled>
                             <option selected>Choose...</option>
                             <option>...</option>
                           </select>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputYear">Year</label>
-                          <select id="inputYear" class="form-control">
+                          <select id="inputYear" class="form-control" disabled>
                             <option selected>Choose...</option>
                             <option>...</option>
                           </select>
@@ -456,7 +456,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019">
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019" disabled>
                           </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -467,24 +467,24 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019">
+                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019" disabled>
                           </div>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15">
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15" disabled>
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30">
+                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30" disabled>
                         </div>
                       </div>
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -538,6 +538,7 @@
   <!-- Custom js for this page-->
   <script src="../../js/dashboard.js"></script>
   <!-- End custom js for this page-->
+  <!-- script customer -->
 </body>
 <footer class="footer">
   <div class="container-fluid clearfix">
