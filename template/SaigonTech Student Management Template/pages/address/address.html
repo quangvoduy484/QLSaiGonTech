@@ -189,72 +189,62 @@
 
 
       <div class="card main-panel">
-        <div class="card-header bg-light">
-          <nav class="navbar navbar-light justify-content-between">
-            <a class="navbar-brand">Address list</a>
-          </nav>
+        <div class="card-header bg-light pb-4">
+          Address
         </div>
-
         <div class="card-body">
           <form>
             <!--Country-->
-              <div class="form-group row">
-                  <label for="inputCountry" class="col-sm-2 col-form-label">Country:</label>
-                  <div class="col-sm-3">
+              <div class="form-group row justify-content-center">
+                  <label for="inputCountry" class="col-sm-1 col-form-label">Country:</label>
+                  <div class="col-sm-4">
                       <select id="inputCountry" class="form-control">
                         <option selected>Choose...</option>
                         <option>Việt Nam</option>
                       </select>
                   </div>
                   
-                  <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#CountryAdd"><i class="fa fa-plus"></i>
-                    New Country</button>
+                  <button class="btn btn-success col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#CountryAdd">Add</button>
               
-                  <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#CountryEdit"><i class="fa fa-plus"></i>
+                  <button class="btn btn-primary col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#CountryEdit"></i>
                     Edit</button>
               
-                  <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#CountryDel"><i class="fa fa-plus"></i>
+                  <button class="btn btn-danger col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#CountryDel"></i>
                     Delete</button>
                   
                 </div>
                 <!--Province-->
-                <div class="form-group row">
-                    <label for="inputProvince" class="col-sm-2 col-form-label">Province:</label>
-                    <div class="col-sm-3">
+                <div class="form-group row justify-content-center">
+                    <label for="inputProvince" class="col-sm-1 col-form-label">Province:</label>
+                    <div class="col-sm-4">
                         <select id="inputProvince" class="form-control">
                           <option selected>Choose...</option>
                           <option>TP.Hồ Chí Minh</option>
                         </select>
                     </div>
                     
-                    <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#ProvinceAdd"><i class="fa fa-plus"></i>
-                      New Province</button>
+                    <button class="btn btn-success col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#ProvinceAdd">Add</button>
                 
-                    <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#ProvinceEdit"><i class="fa fa-plus"></i>
-                      Edit</button>
+                    <button class="btn btn-primary col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#ProvinceEdit">Edit</button>
                 
-                    <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#ProvinceDel"><i class="fa fa-plus"></i>
-                      Delete</button>
+                    <button class="btn btn-danger col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#ProvinceDel">Delete</button>
                     
                   </div>
                   <!--District-->
-                  <div class="form-group row">
-                      <label for="inputDistrict" class="col-sm-2 col-form-label">District:</label>
-                      <div class="col-sm-3">
+                  <div class="form-group row justify-content-center">
+                      <label for="inputDistrict" class="col-sm-1 col-form-label">District:</label>
+                      <div class="col-sm-4">
                           <select id="inputDistrict" class="form-control">
                             <option selected>Choose...</option>
                             <option>Quận 1</option>
                           </select>
                       </div>
                       
-                      <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#DistrictAdd"><i class="fa fa-plus"></i>
-                        New District</button>
+                      <button class="btn btn-success col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#DistrictAdd">Add</button>
                   
-                      <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#DistrictEdit"><i class="fa fa-plus"></i>
-                        Edit</button>
+                      <button class="btn btn-primary col-sm-1 mx-2" type="button" data-toggle="modal" data-target="#DistrictEdit">Edit</button>
                   
-                      <button class="btn btn-primary col-sm-2 mx-2" type="button" data-toggle="modal" data-target="#DistrictDel"><i class="fa fa-plus"></i>
-                        Delete</button>
+                      <button class="btn btn-danger col-sm-1 mx-2 " type="button" data-toggle="modal" data-target="#DistrictDel">Delete</button>
                       
                     </div>
               </form>
@@ -429,7 +419,7 @@
                 <div class="form-group row">
                   <label for="inputProvinceName" class="col-sm-4 col-form-label">Province name:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputProvinceName" placeholder="Enter Province name">
+                    <input type="text" class="form-control" id="inputProvinceName" value="TP. Hồ Chí Minh">
                   </div>
                 </div>
               </form>
@@ -475,7 +465,7 @@
                 <div class="form-group row">
                   <label for="inputDistrictName" class="col-sm-4 col-form-label">District name:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputDistrictName" placeholder="Enter District name">
+                    <input type="text" class="form-control" id="inputDistrictName" value="Quận 1">
                   </div>
                 </div>
               </form>
