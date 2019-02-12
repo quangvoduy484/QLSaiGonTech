@@ -15,6 +15,7 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../Daterangepicker/daterangepicker.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -238,11 +239,13 @@
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15">
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15"
+                            name="datetimes">
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30">
+                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30"
+                            name="datetimes">
                         </div>
                       </div>
                     </form>
@@ -517,6 +520,23 @@
               </tbody>
             </table>
           </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <!-- partial -->
       </div>
@@ -538,6 +558,21 @@
   <script src="../../js/dashboard.js"></script>
   <!-- End custom js for this page-->
   <!-- script customer -->
+  <script type="text/javascript" src="../../Daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="../../Daterangepicker/daterangepicker.min.js"></script>
+
+  <script>
+    $(function () {
+      $('input[name="datetimes"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+          format: 'M/DD hh:mm A'
+        }
+      });
+    });
+  </script>
 </body>
 <footer class="footer">
   <div class="container-fluid clearfix">
