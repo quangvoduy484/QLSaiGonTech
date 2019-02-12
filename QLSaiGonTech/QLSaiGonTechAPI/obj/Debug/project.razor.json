@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\OneDrive\\PROJECT\\Quản lý thông tin tuyển sinh SaigonTech\\QLSaiGonTech\\QLSaiGonTech\\QLSaiGonTechAPI\\QLSaiGonTechAPI.csproj",
+  "TargetFramework": "v4.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
