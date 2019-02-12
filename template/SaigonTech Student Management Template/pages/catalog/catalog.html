@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="../../vendors/iconfonts/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.addons.css">
+
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -162,19 +164,19 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/address/address.html">
+            <a class="nav-link" href="../address/address.html">
               <i class="menu-icon mdi mdi-table"></i>
               <span class="menu-title">Address</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/province/province.html">
+            <a class="nav-link" href="../province/province.html">
               <i class="menu-icon mdi mdi-table"></i>
               <span class="menu-title">Province</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/district/district.html">
+            <a class="nav-link" href="../district/district.html">
               <i class="menu-icon mdi mdi-table"></i>
               <span class="menu-title">District</span>
             </a>
@@ -182,15 +184,216 @@
         </ul>
       </nav>
       <!-- content-wrapper ends -->
-      <!-- partial:partials/_footer.html -->
-      <footer class="footer">
-        <div class="container-fluid clearfix">
 
-        </div>
-      </footer>
       <!-- page-body-wrapper ends -->
+      <div class="card main-panel">
+        <div class="card-header bg-light">
+          <nav class="navbar navbar-light justify-content-between">
+            <a class="navbar-brand">Catalog list</a>
+            <form class="form-inline my-2 my-lg-0">
+              <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#catalogadd"><i class="fa fa-plus"></i>
+                Add</button>
+
+            </form>
+          </nav>
+        </div>
+        <div class="card-body table-responsive">
+          <table class="table table-striped w-100 text-center">
+            <thead class="text-white">
+              <tr class="bg-color">
+                <th scope="col">No.</th>
+                <th scope="col">ID</th>
+                <th scope="col">Begin Year</th>
+                <th scope="col">End Year</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>ID-01</td>
+                <td>2015</td>
+                <td>2019</td>
+                <td> <a href="" data-target="#viewcatalog" data-toggle="modal" class="text-warning">Detail</a> | <a href="" data-target="#editcatalog" data-toggle="modal">Edit</a> | <a href="" data-target="#deletecatalog"
+                    data-toggle="modal" class="text-danger">Delete</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>ID-02</td>
+                <td>2016</td>
+                <td>2020</td>
+                <td> <a href="" data-target="#viewcatalog" data-toggle="modal" class="text-warning">Detail</a> | <a href="" data-target="#editcatalog" data-toggle="modal">Edit</a> | <a href="" data-target="#deletecatalog"
+                    data-toggle="modal" class="text-danger">Delete</a></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- view catalog-->
+      <div class="modal fade" id="viewcatalog" tabindex="-1" role="dialog" aria-labelledby="NationAddLable" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="NationpleModalLabel">Catalog Detail</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="inputID" class="col-sm-4 col-form-label">Catalog ID:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" placeholder="Enter Catalog ID" id="inputID" value="ID-01">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">Begin year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" placeholder="Enter begin year" value="2015">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">End year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" placeholder="Enter end year" value="2019">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- add catalog-->
+      <div class="modal fade" id="catalogadd" tabindex="-1" role="dialog" aria-labelledby="NationAddLable" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="NationpleModalLabel">Add Catalog</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="inputID" class="col-sm-4 col-form-label">Catalog ID:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" placeholder="Enter catalog ID" id="inputID">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">Begin year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" placeholder="Enter begin year">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">End year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" placeholder="Enter begin year">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- edit -->
+      <div class="modal fade" id="editcatalog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Catalog</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="inputID" class="col-sm-4 col-form-label">Catalog ID:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputID" value="ID-01">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">Begin year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" value="2015">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">End year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" value="2019">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- delete -->
+      <div class="modal fade" id="deletecatalog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete Catalog</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="inputID" class="col-sm-4 col-form-label">Catalog ID:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputID" value="ID-01" disabled>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">Begin year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" value="2015" disabled>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputCatalogName" class="col-sm-4 col-form-label">End year:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCatalogName" value="2019" disabled>
+                  </div>
+                </div>
+              </form>
+              <p class="text-danger">Are you sure delete catalog?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- container-scroller -->
+  </div>
+  <!-- container-scroller -->
+
   </div>
   <!-- plugins:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
@@ -206,5 +409,11 @@
   <script src="../../js/dashboard.js"></script>
   <!-- End custom js for this page-->
 </body>
+<!-- partial:partials/_footer.html -->
+<footer class="footer">
+  <div class="container-fluid clearfix">
+
+  </div>
+</footer>
 
 </html>
