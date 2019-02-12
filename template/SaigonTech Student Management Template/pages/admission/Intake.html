@@ -164,9 +164,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../country/country.html">
+            <a class="nav-link" href="../address/address.html">
               <i class="menu-icon mdi mdi-table"></i>
-              <span class="menu-title">Country</span>
+              <span class="menu-title">Address</span>
             </a>
           </li>
           <li class="nav-item">
@@ -212,32 +212,65 @@
                 <th scope="row">1</th>
                 <td>ID-01</td>
                 <td>SGT-01</td>
-                <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
+                <td> <a href="" data-target="#viewintake" data-toggle="modal" class="text-warning">Detail</a> | <a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
                     data-toggle="modal" class="text-danger">Delete</a></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>ID-02</td>
                 <td>SGT-02</td>
-                <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
+                <td> <a href="" data-target="#viewintake" data-toggle="modal" class="text-warning">Detail</a> | <a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
                     data-toggle="modal" class="text-danger">Delete</a></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>ID-03</td>
                 <td>SGT-03</td>
-                <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
+                <td> <a href="" data-target="#viewintake" data-toggle="modal" class="text-warning">Detail</a> | <a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
                     data-toggle="modal" class="text-danger">Delete</a></td>
               </tr>
               <tr>
                 <th scope="row">4</th>
                 <td>ID-04</td>
                 <td>SGT-04</td>
-                <td><a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
+                <td> <a href="" data-target="#viewintake" data-toggle="modal" class="text-warning">Detail</a> | <a href="" data-target="#editintake" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteintake"
                     data-toggle="modal" class="text-danger">Delete</a></td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- view intake-->
+      <div class="modal fade" id="viewintake" tabindex="-1" role="dialog" aria-labelledby="NationAddLable" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="NationpleModalLabel">Intake Detail</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="inputID" class="col-sm-4 col-form-label">Intake ID:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" placeholder="Enter intake ID" id="inputID" value="ID-01">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputIntakeName" class="col-sm-4 col-form-label">Intake name:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputIntakeName" placeholder="Enter intake name" value="SGT-01">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">Close</button>              
+            </div>
+          </div>
         </div>
       </div>
       <!-- add intake-->
