@@ -112,7 +112,8 @@
                   <a class="nav-link" href="../../pages/about-candidate/document.html"> Document </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document </a>
+                  <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document
+                  </a>
                 </li>
               </ul>
             </div>
@@ -142,7 +143,7 @@
                   <a class="nav-link" href="../../pages/management/semester.html"> Semester </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link "   href="../../pages/management/stage.html"> Stage </a>
+                  <a class="nav-link " href="../../pages/management/stage.html"> Stage </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../../pages/management/address.html"> Address </a>
@@ -185,16 +186,16 @@
           <div class="card-header text-dark">
             Stage Detail
             <div class="ml-auto d-inline float-right">
-              <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addStage">Add</button>
+              <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addStageDetail">Add</button>
             </div>
 
             <!-- add -->
-            <div class="modal fade" id="addStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="addStageDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New Stage</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">New Stage Detail</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -204,18 +205,32 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1">
+                          <input type="text" class="form-control mb-2" id="inputStage" placeholder="Enter begin stage">
                         </div>
                         <div class="form-group col-md-4">
-                          <label for="inputSemester">Semester</label>
-                          <select id="inputSemester" class="form-control">
+                          <label for="inputCandidate">Candidate Name</label>
+                          <input type="text" class="form-control mb-2" id="inputCandidate" placeholder="Enter begin candidate">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputSubject">Subject</label>
+                          <select id="inputSubject" class="form-control">
                             <option selected>Choose...</option>
                             <option>...</option>
                           </select>
                         </div>
+                      </div>
+                      <div class="form-row">
                         <div class="form-group col-md-4">
-                          <label for="inputYear">Year</label>
-                          <select id="inputYear" class="form-control">
+                          <label for="inputScore">Score</label>
+                          <input type="text" class="form-control mb-2" id="inputScore" placeholder="Enter begin score">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputInterview">Interview</label>
+                          <input type="text" class="form-control mb-2" id="inputInterview" placeholder="Enter begin interview">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputMajor">Major</label>
+                          <select id="inputMajor" class="form-control">
                             <option selected>Choose...</option>
                             <option>...</option>
                           </select>
@@ -223,36 +238,12 @@
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="inputDateTime">Date/Time</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                              </div>
-                            </div>
-                            <input type="date" class="form-control" id="inputDateTime">
-                          </div>
+                          <label for="inputStarTime">Star Time</label>
+                          <input type="text" class="form-control mb-2" id="inputStarTime" name="datetimes">
                         </div>
                         <div class="form-group col-md-6">
-                          <label for="inputExamDate">Exam Date</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                              </div>
-                            </div>
-                            <input type="date" class="form-control" id="inputExamDate">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" name="datetimes">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" name="datetimes">
+                          <label for="inputEndTime">End Time</label>
+                          <input type="text" class="form-control mb-2" id="inputEndTime" name="datetimes">
                         </div>
                       </div>
                     </form>
@@ -265,7 +256,7 @@
               </div>
             </div>
             <!-- edit -->
-            <div class="modal fade" id="editStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="editStageDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -280,55 +271,45 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1">
+                          <input type="text" class="form-control mb-2" id="inputStage" value="Stage 1">
                         </div>
                         <div class="form-group col-md-4">
-                          <label for="inputSemester">Semester</label>
-                          <select id="inputSemester" class="form-control">
-                            <option selected>Choose...</option>
+                          <label for="inputCandidate">Candidate Name</label>
+                          <input type="text" class="form-control mb-2" id="inputCandidate" value="Đỗ Ngọc Quốc">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputSubject">Subject</label>
+                          <select id="inputSubject" class="form-control">
+                            <option selected>English</option>
                             <option>...</option>
                           </select>
                         </div>
+                      </div>
+                      <div class="form-row">
                         <div class="form-group col-md-4">
-                          <label for="inputYear">Year</label>
-                          <select id="inputYear" class="form-control">
-                            <option selected>Choose...</option>
+                          <label for="inputScore">Score</label>
+                          <input type="text" class="form-control mb-2" id="inputScore" value="48">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputInterview">Interview</label>
+                          <input type="text" class="form-control mb-2" id="inputInterview" value="Thanh Liêm">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputMajor">Major</label>
+                          <select id="inputMajor" class="form-control">
+                            <option selected>Design</option>
                             <option>...</option>
                           </select>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="inputDateTime">Date/Time</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                              </div>
-                            </div>
-                            <input type="date" class="form-control" id="inputDateTime">
-                          </div>
+                          <label for="inputStarTime">Star Time</label>
+                          <input type="text" class="form-control mb-2" id="inputStarTime" name="datetimes">
                         </div>
                         <div class="form-group col-md-6">
-                          <label for="inputExamDate">Exam Date</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                              </div>
-                            </div>
-                            <input type="date" class="form-control" id="inputExamDate">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" name="datetimes">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" name="datetimes">
+                          <label for="inputEndTime">End Time</label>
+                          <input type="text" class="form-control mb-2" id="inputEndTime" name="datetimes">
                         </div>
                       </div>
                     </form>
@@ -342,7 +323,7 @@
             </div>
 
             <!-- delete -->
-            <div class="modal fade" id="deleteStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="deleteStageDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -353,7 +334,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p class="text-danger">Are you sure delete Stage?</p>
+                    <p class="text-danger">Are you sure delete stage detail?</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -378,60 +359,46 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1"
-                            disabled>
+                          <input type="text" class="form-control mb-2" id="inputStage" value="Stage 1" readonly>
                         </div>
                         <div class="form-group col-md-4">
-                          <label for="inputSemester">Semester</label>
-                          <select id="inputSemester" class="form-control" disabled>
-                            <option selected>Choose...</option>
+                          <label for="inputCandidate">Candidate Name</label>
+                          <input type="text" class="form-control mb-2" id="inputCandidate" value="Đỗ Ngọc Quốc"
+                            readonly>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputSubject">Subject</label>
+                          <select id="inputSubject" class="form-control" disabled>
+                            <option selected>English</option>
                             <option>...</option>
                           </select>
                         </div>
+                      </div>
+                      <div class="form-row">
                         <div class="form-group col-md-4">
-                          <label for="inputYear">Year</label>
-                          <select id="inputYear" class="form-control" disabled>
-                            <option selected>Choose...</option>
+                          <label for="inputScore">Score</label>
+                          <input type="text" class="form-control mb-2" id="inputScore" value="48" readonly>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputInterview">Interview</label>
+                          <input type="text" class="form-control mb-2" id="inputInterview" value="Thanh Liêm" readonly>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputMajor">Major</label>
+                          <select id="inputMajor" class="form-control" disabled>
+                            <option selected>Design</option>
                             <option>...</option>
                           </select>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label for="inputDateTime">Date/Time</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019"
-                              disabled>
-                          </div>
+                          <label for="inputStarTime">Star Time</label>
+                          <input type="text" class="form-control mb-2" id="inputStarTime" name="datetimes" disabled>
                         </div>
                         <div class="form-group col-md-6">
-                          <label for="inputExamDate">Exam Date</label>
-                          <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019"
-                              disabled>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15"
-                            disabled>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30"
-                            disabled>
+                          <label for="inputEndTime">End Time</label>
+                          <input type="text" class="form-control mb-2" id="inputEndTime" name="datetimes" disabled>
                         </div>
                       </div>
                     </form>
@@ -445,28 +412,28 @@
           </div>
           <div class="card-body table-responsive">
             <table class="table table-striped table-hover">
-              <thead class="bg-color" style="color: white">
+              <thead class="bg-color text-white">
                 <tr>
                   <th scope="col">No.</th>
                   <th scope="col">Stage Name</th>
-                  <th scope="col">Date/Time</th>
-                  <th scope="col">Exam Date</th>
-                  <th scope="col">Exam Time</th>
-                  <th scope="col">Time Of English Exam</th>
+                  <th scope="col">Candidate Name</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Score</th>
+                  <th scope="col">Major</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr data-toggle="modal">
+                <tr>
                   <th scope="row">1</th>
                   <td>Stage 1</td>
-                  <td>18/09/2018</td>
-                  <td>01/10/2018</td>
-                  <td>8h15 - 10h15</td>
-                  <td>10h30 - 11h30</td>
-                  <td><a href="" data-target="#detailStage" data-toggle="modal" class="text-warning">Details</a>
-                    | <a href="" data-target="#editStage" data-toggle="modal">Edit</a>
-                    | <a href="" data-target="#deleteStage" data-toggle="modal" class="text-danger">Delete</a>
+                  <td>Đỗ Ngọc Quốc</td>
+                  <td>English</td>
+                  <td>48</td>
+                  <td>Design</td>
+                  <td><a href="" data-target="#detailStage" data-toggle="modal" class="text-warning">Detail</a>
+                    | <a href="" data-target="#editStageDetail" data-toggle="modal">Edit</a>
+                    | <a href="" data-target="#deleteStageDetail" data-toggle="modal" class="text-danger">Delete</a>
                   </td>
                 </tr>
               </tbody>
@@ -517,13 +484,27 @@
     $(function () {
       $('input[name="datetimes"]').daterangepicker({
         timePicker: true,
-        startDate: moment().startOf('hour'),
-        endDate: moment().startOf('hour').add(32, 'hour'),
+        singleDatePicker: true,
+        showDropdowns: true,
         locale: {
-          format: 'M/DD hh:mm A'
+          format: 'DD/MM/YYYY hh:mm A'
         }
       });
     });
+
+
+    // $(function () {
+    //   $('input[name="datetimes"]').daterangepicker({
+    //     timePicker: true,
+    //     singleDatePicker: true,
+    //     showDropdowns: true,
+    //     minYear: 1901,
+    //     maxYear: parseInt(moment().format('YYYY'), 10)
+    //   }, function (start, end, label) {
+    //     var years = moment().diff(start, 'years');
+    //     alert("You are " + years + " years old!");
+    //   });
+    // });
   </script>
 </body>
 <footer class="footer">

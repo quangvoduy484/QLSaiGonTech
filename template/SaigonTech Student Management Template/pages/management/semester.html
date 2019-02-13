@@ -113,7 +113,8 @@
                   <a class="nav-link" href="../../pages/about-candidate/document.html"> Document </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document </a>
+                  <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document
+                  </a>
                 </li>
               </ul>
             </div>
@@ -143,7 +144,7 @@
                   <a class="nav-link" href="../../pages/management/semester.html"> Semester </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link "   href="../../pages/management/stage.html"> Stage </a>
+                  <a class="nav-link " href="../../pages/management/stage.html"> Stage </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../../pages/management/address.html"> Address </a>
@@ -202,12 +203,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Semester Name</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name">
-                          </div>
+                      <div class="form-group row">
+                        <label for="inputSemester" class="col-sm-4 col-form-label">Semester Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputSemester" placeholder="Enter begin semester">
                         </div>
                       </div>
                     </form>
@@ -232,12 +231,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Semester Name</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name">
-                          </div>
+                      <div class="form-group row">
+                        <label for="editSemester" class="col-sm-4 col-form-label">Semester Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="editSemester" value="Spring">
                         </div>
                       </div>
                     </form>
@@ -263,12 +260,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Semester Name</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name">
-                          </div>
+                      <div class="form-group row">
+                        <label for="deleteSemester" class="col-sm-4 col-form-label">Semester Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="deleteSemester" value="Spring" readonly>
                         </div>
                       </div>
                     </form>
@@ -294,13 +289,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Semester Name</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="Semester Name"
-                              disabled>
-                          </div>
+                      <div class="form-group row">
+                        <label for="detailSemester" class="col-sm-4 col-form-label">Semester Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="detailSemester" value="Spring" readonly>
                         </div>
                       </div>
                     </form>
@@ -325,7 +317,7 @@
                 <tr>
                   <th scope="row">1</th>
                   <td>Spring</td>
-                  <td><a href="" data-target="#detailSemester" data-toggle="modal" class="text-warning">Details</a>
+                  <td><a href="" data-target="#detailSemester" data-toggle="modal" class="text-warning">Detail</a>
                     | <a href="" data-target="#editSemester" data-toggle="modal">Edit</a>
                     | <a href="" data-target="#deleteSemester" data-toggle="modal" class="text-danger">Delete</a></td>
                 </tr>

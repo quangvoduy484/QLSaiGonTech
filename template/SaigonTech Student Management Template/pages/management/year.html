@@ -111,7 +111,8 @@
                   <a class="nav-link" href="../../pages/about-candidate/document.html"> Document </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document </a>
+                  <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document
+                  </a>
                 </li>
               </ul>
             </div>
@@ -141,7 +142,7 @@
                   <a class="nav-link" href="../../pages/management/semester.html"> Semester </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link "   href="../../pages/management/stage.html"> Stage </a>
+                  <a class="nav-link " href="../../pages/management/stage.html"> Stage </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../../pages/management/address.html"> Address </a>
@@ -200,12 +201,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Year</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="2019">
-                          </div>
+                      <div class="form-group row">
+                        <label for="inputYear" class="col-sm-4 col-form-label">Year Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="inputYear" placeholder="Enter begin year">
                         </div>
                       </div>
                     </form>
@@ -230,12 +229,10 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Year</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="2019">
-                          </div>
+                      <div class="form-group row">
+                        <label for="editYear" class="col-sm-4 col-form-label">Year Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="editYear" value="2017">
                         </div>
                       </div>
                     </form>
@@ -261,16 +258,14 @@
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Year</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="2019">
-                          </div>
+                      <div class="form-group row">
+                        <label for="deleteYear" class="col-sm-4 col-form-label">Year Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="deleteYear" value="2017" readonly>
                         </div>
                       </div>
                     </form>
-                    <p class="text-danger">Are you sure delete Year?</p>
+                    <p class="text-danger">Are you sure delete year?</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -285,19 +280,17 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Year</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Detail Year</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
                     <form>
-                      <div class="form-row">
-                        <div class="form-group col-md">
-                          <label for="inputDateTime">Year</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="2019" disabled>
-                          </div>
+                      <div class="form-group row">
+                        <label for="detailYear" class="col-sm-4 col-form-label">Year Name</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="detailYear" value="2017" readonly>
                         </div>
                       </div>
                     </form>
@@ -322,7 +315,7 @@
                 <tr>
                   <th scope="row">1</th>
                   <td>2017</td>
-                  <td><a href="" data-target="#detailYear" data-toggle="modal" class="text-warning">Details</a>
+                  <td><a href="" data-target="#detailYear" data-toggle="modal" class="text-warning">Detail</a>
                     | <a href="" data-target="#editYear" data-toggle="modal">Edit</a>
                     | <a href="" data-target="#deleteYear" data-toggle="modal" class="text-danger">Delete</a></td>
                 </tr>
