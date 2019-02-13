@@ -157,7 +157,6 @@
               </ul>
             </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#Admission" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-table"></i>
@@ -180,8 +179,188 @@
           </li>
         </ul>
       </nav>
+      
+      <div class="main-panel">
+        <div class="card">
+          <div class="card-header text-dark">
+            Exam
+            <div class="ml-auto d-inline float-right">
+              <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addStage">Add</button>
+            </div>
 
-      <!-- content-wrapper ends -->
+            <!-- add -->
+            <div class="modal fade" id="addStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Exam</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputDateTime">Exam Name</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
+                          </div>
+                        </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputStage">Major</label>
+                          <select id="inputStage" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputYear">Passing Score</label>
+                          <select id="inputYear" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>  
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- edit -->
+            <div class="modal fade" id="editStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Exam</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputDateTime">Exam Name</label>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
+                          </div>
+                        </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputStage">Major</label>
+                          <select id="inputStage" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputYear">Passing Score</label>
+                          <select id="inputYear" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>  
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- delete -->
+            <div class="modal fade" id="deleteStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Stage</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-danger">Are you sure delete Stage?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-striped">
+              <thead class="bg-color">
+                <tr class="text-white">
+                  <th scope="col">No.</th>
+                  <th scope="col">Exam Name</th>
+                  <th scope="col">Major</th>
+                  <th scope="col">Passing Score</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>GE Final Exam</td>
+                  <td>GE</td>
+                  <td>70</td>
+                  <td><a href="" data-target="#editStage" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteStage"
+                      data-toggle="modal" class="text-danger">Delete</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>DataBase Final Exam</td>
+                    <td>ISC</td>
+                    <td>60</td>
+                    <td><a href="" data-target="#editStage" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteStage"
+                        data-toggle="modal" class="text-danger">Delete</a></td>
+                  </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Front End Final Exam</td>
+                    <td>ISC</td>
+                    <td>60</td>
+                    <td><a href="" data-target="#editStage" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteStage"
+                        data-toggle="modal" class="text-danger">Delete</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- partial -->
+      </div>
+      <!-- partial:partials/_footer.html -->
+      
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+  </div>
       <!-- partial:partials/_footer.html -->
     </div>
       
