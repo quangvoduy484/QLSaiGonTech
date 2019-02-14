@@ -113,9 +113,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../../pages/about-candidate/document.html"> Document </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="../../pages/about-candidate/candidate-document.html"> Candidate Document </a>
-                </li>
+                </li> -->
               </ul>
             </div>
           </li>
@@ -210,7 +210,7 @@
                                                 <td>Vietnam</td>
                                                 <td>
                                                   <a href="candidate-info.html" class="text-warning">Detail</a> |
-                                                  <a href="#">Edit</a> |
+                                                  <a href="candidate-info-edit.html">Edit</a> |
                                                   <a href="candidate-document.html">Document</a> |
                                                   <a href="#" class="text-danger" data-toggle="modal" data-target="#deleteCandidate">Delete</a>
                                                 </td>
@@ -317,24 +317,24 @@
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputFirstname">First name</label>
-                        <input type="text" class="form-control" id="inputFirstname" placeholder="First name">
+                        <label for="inputFirstname">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstname" placeholder="First Name">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputLastname">Last name</label>
-                        <input type="text" class="form-control" id="inputLastname" placeholder="Last name">
+                        <label for="inputLastname">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastname" placeholder="Last Name">
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputbirthday">Date of birth</label>
+                        <label for="inputbirthday">Date Of Birth</label>
                         <input type="date" class="form-control" id="inputbirthday">
                       </div>
                       <div class="form-group col-md-3">
                         <label for="inputGender">Gender</label>
                         <select id="inputGender" class="form-control">
-                          <option selected>Nam</option>
-                          <option>Nữ</option>
+                          <option selected>Male</option>
+                          <option>Female</option>
                         </select>
                       </div>
                     </div>
@@ -352,7 +352,7 @@
                       <div class="form-group col-md-6">
                         <label for="">Address</label>
                         <select id="inputCountry" class="form-control">
-                          <option disabled selected>Choose a Country</option>
+                          <option disabled selected>Choose A Country</option>
                           <option value="">Vietnam</option>
                           <option value="">United of America</option>
                           <option value="">Japanese</option>
@@ -361,7 +361,7 @@
                       <div class="form-group col-md-6">
                         <label for=""></label>
                         <select id="inputProvince" class="form-control">
-                          <option disabled selected>Choose a Province</option>
+                          <option disabled selected>Choose A Province</option>
                           <option value="">TP. Hồ Chí Minh</option>
                           <option value="">Hà Nội</option>
                           <option value="">Đã Nẵng</option>
@@ -371,7 +371,7 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <select id="inputDistrict" class="form-control">
-                          <option disabled selected>Choose a District</option>
+                          <option disabled selected>Choose A District</option>
                           <option value="">Quận 1</option>
                           <option value="">Quận 2</option>
                           <option value="">Quận 3</option>
@@ -383,13 +383,13 @@
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-12">
-                        <label for="inputPlaceofbirth">Place of birth</label>
+                        <label for="inputPlaceofbirth">Place Of Birth</label>
                         <input type="text" class="form-control" id="inputPlaceofbirth" placeholder="Hospital, Districts, City">
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-2">
-                        <label for="">Marial status:</label>
+                        <label for="">Marial Status:</label>
                       </div>
                       <div class="form-group col-md-2">
                         <input type="radio" class="form-check-input" name="marialstatusvalue" value="1" id="single" checked>
@@ -420,22 +420,22 @@
                       <div class="form-group col-md-6">
                         <label for="inputhomecountry">Home Country</label>
                         <select id="inputhomecountry" class="form-control">
-                          <option value="" disabled selected>Choose a Country</option>
+                          <option value="" disabled selected>Choose A Country</option>
                           <option>Vietnam</option>
-                          <option>United States of America</option>
+                          <option>United States Of America</option>
                           <option>Japan</option>
                         </select>
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputHighschoolname">High school name</label>
-                        <input type="text" id="inputHighschoolname" class="form-control" placeholder="High school name">
+                        <label for="inputHighschoolname">High School Name</label>
+                        <input type="text" id="inputHighschoolname" class="form-control" placeholder="High School Name">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputHighschoolcity">High school city</label>
+                        <label for="inputHighschoolcity">High School City</label>
                         <select id="inputHighschoolcity" class="form-control">
-                          <option disabled selected>Choose a Province</option>
+                          <option disabled selected>Choose A Province</option>
                           <option value="">TP. Hồ Chí Minh</option>
                           <option value="">Hà Nội</option>
                           <option value="">Đã Nẵng</option>
@@ -444,13 +444,13 @@
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputHighschool">High school graduate year</label>
+                        <label for="inputHighschool">High School Graduate Year</label>
                         <input type="number" id="inputHighschoolname" class="form-control" min="1900" max="2099" step="1" value="2019">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputEducation">Education</label>
                         <select id="inputEducation" class="form-control">
-                          <option disabled selected>Choose a Education</option>
+                          <option disabled selected>Choose A Education</option>
                           <option value="">THPT</option>
                         </select>
                       </div>
