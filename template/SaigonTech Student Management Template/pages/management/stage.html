@@ -173,11 +173,12 @@
                   <a class="nav-link" href="../../pages/admission/exam.html"> Exam </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../../pages/admission/score-exam.html"> Score Of Exam </a>
+                  </li>
+                <li class="nav-item">
                   <a class="nav-link" href="../../pages/admission/stage-detail.html"> Stage Detail </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../../pages/admission/score-exam.html"> Score Of Exam </a>
-                </li>
+                
               </ul>
             </div>
           </li>
@@ -188,6 +189,7 @@
       <!-- content-wrapper ends -->
 
       <div class="main-panel">
+     
         <div class="card">
           <div class="card-header text-dark">
             Stage
@@ -516,7 +518,7 @@
   <!-- script customer -->
   <script type="text/javascript" src="../../Daterangepicker/moment.min.js"></script>
   <script type="text/javascript" src="../../Daterangepicker/daterangepicker.min.js"></script>
-
+  <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
   <script>
     $(function () {
       $('input[name="datetimes"]').daterangepicker({
@@ -535,5 +537,30 @@
 
   </div>
 </footer>
+  <script>
+    document.onkeydown = fkey;
+    document.onkeypress = fkey
+    document.onkeyup = fkey;
+
+var wasPressed = false;
+
+
+function fkey(e){
+        e = e || window.event;
+       if( wasPressed ) return; 
+
+       if (e.code === 'F5')  {
+             alert("f5 pressed");
+            wasPressed = true;
+        }else {
+            alert("Window closed");
+        }
+ }
+    
+  
+  
+  
+  
+  </script>
 
 </html>
