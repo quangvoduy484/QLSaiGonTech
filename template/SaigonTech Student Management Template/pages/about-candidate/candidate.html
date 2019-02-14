@@ -209,13 +209,35 @@
                                                 <td>1997-12-31</td>
                                                 <td>Vietnam</td>
                                                 <td>
-                                                  <a href="#" class="text-warning">Detail</a> |
+                                                  <a href="candidate-info.html" class="text-warning">Detail</a> |
                                                   <a href="#">Edit</a> |
-                                                  <a href="Document-Of-Cadidate.html">Document</a> |
-                                                  <a href="#" onclick="return confirm('Bạn chắc chắn muốn xóa ?');" class="text-danger">Delete</a>
+                                                  <a href="candidate-document.html">Document</a> |
+                                                  <a href="#" class="text-danger" data-toggle="modal" data-target="#deleteCandidate">Delete</a>
                                                 </td>
                                             </tr>
                                             
+                                            <!--START: MODAL DELETE-->
+                                              <div class="modal fade" id="deleteCandidate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                  aria-hidden="true">
+                                                  <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Delete Candidate</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                        <p class="text-danger">Are you sure delete this Candidate?</p>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" class="btn btn-danger">Delete</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            <!--END: MODAL DELETE-->
                                             
                                         </tbody>
                                     </table>
