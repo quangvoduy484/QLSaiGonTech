@@ -1,9 +1,11 @@
 .content-main {
     width: 100%;
+    margin-left: 10px;
 }
 
 thead {
     background-color: #1E7BCB;
+    color: white;
 }
 
 @media (min-width: 992px) {
@@ -13,14 +15,6 @@ thead {
 
 .card-header h3 {
     text-align: center;
-}
-
-.deletelink {
-    color: red;
-}
-
-.deletelink:hover {
-    color: crimson;
 }
 
 .addbutton {
