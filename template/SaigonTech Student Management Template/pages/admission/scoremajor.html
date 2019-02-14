@@ -122,7 +122,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#Management" aria-expanded="false" aria-controls="Management">
               <i class="menu-icon mdi mdi-table"></i>
-              <span class="menu-title">Managementt</span>
+              <span class="menu-title">Management</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="Management">
@@ -167,10 +167,10 @@
             <div class="collapse" id="Admission">
               <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
-                      <a class="nav-link" href="../../pages/admission/exam.html"> Exam </a>
+                      <a class="nav-link" href="../../pages/admission/exam.html"> Exam Subject </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../../pages/admission/scoremajor.html"> Score Of Exam </a>
+                      <a class="nav-link" href="../../pages/admission/scoremajor.html"> Score Of Exam Subject </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../../pages/admission/stage-detail.html"> Stage Detail </a>
@@ -179,23 +179,25 @@
             </div>
           </li>
         </ul>
-
       </nav>
+      <!-- END content-wrapper  -->
+      
+      <!-- page-body-wrapper -->
       <div class="main-panel">
           <div class="card">
             <div class="card-header text-dark">
-              Exam
+              Score of Exam
               <div class="ml-auto d-inline float-right">
-                <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addStage">Add</button>
+                <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#add">Add</button>
               </div>
   
-              <!-- add -->
-              <div class="modal fade" id="addStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              <!-- ADD Modal -->
+              <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">New Exam</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Add Score of Exam</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -204,17 +206,35 @@
                       <form>
                         <div class="form-row">
                           <div class="form-group col-md-12">
-                            <label for="inputDateTime">Exam Name</label>
+                            <label for="inputDateTime">Exam Subject</label>
                             <div class="input-group mb-2">
-                              <!-- <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                  <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                                </div>
-                              </div> -->
                               <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
                             </div>
                           </div>
-                        
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-12">
+                            <label for="inputYear">Major</label>
+                            <select id="inputYear" class="form-control">
+                              <option value="" selected>IT</option>
+                              <option value="">BA</option>
+                              <option value="">GE</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputDateTime">Passing Score</label>
+                            <div class="input-group mb-2">
+                              <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputDateTime">Maximum Score</label>
+                            <div class="input-group mb-2">
+                              <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
+                            </div>
+                          </div>
                         </div>
                       </form>
                     </div>
@@ -225,13 +245,14 @@
                   </div>
                 </div>
               </div>
-              <!-- edit -->
-              <div class="modal fade" id="editStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+               <!-- END ADD Modal  -->
+              <!-- EDIT MODAL-->
+              <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Edit Exam</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Edit Score of Exam Subject</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -240,17 +261,35 @@
                       <form>
                         <div class="form-row">
                           <div class="form-group col-md-12">
-                            <label for="inputDateTime">Exam Name</label>
+                            <label for="inputDateTime">Score of Exam Subject</label>
                             <div class="input-group mb-2">
-                              <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                  <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
-                                </div>
-                              </div>
                               <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
                             </div>
                           </div>
-                        
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-12">
+                            <label for="inputYear">Major</label>
+                            <select id="inputYear" class="form-control">
+                              <option value="" selected>IT</option>
+                              <option value="">BA</option>
+                              <option value="">GE</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputDateTime">Passing Score</label>
+                            <div class="input-group mb-2">
+                              <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputDateTime">Maximum Score</label>
+                            <div class="input-group mb-2">
+                              <input type="text" class="form-control" id="inputDateTime" placeholder="isc07 test">
+                            </div>
+                          </div>
                         </div>
                       </form>
                     </div>
@@ -261,20 +300,20 @@
                   </div>
                 </div>
               </div>
-  
-              <!-- delete -->
-              <div class="modal fade" id="deleteStage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              <!-- END EDIT   -->
+              <!-- DELETE Modal -->
+              <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Delete Stage</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Delete Score of Exam</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      <p class="text-danger">Are you sure delete Stage?</p>
+                      <p class="text-danger">Are you sure delete this score of the subject?</p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -283,17 +322,19 @@
                   </div>
                 </div>
               </div>
+             <!-- END DELETE -->  
             </div>
+            <!-- MAIN TABLE -->
             <div class="card-body table-responsive">
               <table class="table table-striped">
                 <thead class="bg-color">
                   <tr class="text-white">
                     <th scope="col">No</th>
-                    <th scope="col">Exam Name</th>
-                    <th>Major Name</th>
-                    <th>Score Pass</th>
-                    <th>Sum Srocre</th>
-                    <th></th>
+                    <th scope="col">Exam Subject</th>
+                    <th>Major </th>
+                    <th>Passing Score</th>
+                    <th>Maximum Score</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -303,8 +344,9 @@
                     <td>IT</td>
                     <td>40</td>
                     <td>100</td>
-                    <td><a href="" data-target="#editStage" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteStage"
-                        data-toggle="modal" class="text-danger">Delete</a></td>
+                    <td><a href="" data-target="#edit" data-toggle="modal">Edit</a> | 
+                        <a href="" data-target="#delete" data-toggle="modal" class="text-danger">Delete</a>
+                    </td>
                   </tr>
                   <tr>
                       <th scope="row">2</th>
@@ -312,8 +354,9 @@
                       <td>IT</td>
                       <td>60</td>
                       <td>100</td>
-                      <td><a href="" data-target="#editStage" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteStage"
-                          data-toggle="modal" class="text-danger">Delete</a></td>
+                      <td><a href="" data-target="#edit" data-toggle="modal">Edit</a> | 
+                        <a href="" data-target="#delete" data-toggle="modal" class="text-danger">Delete</a>
+                      </td>
                     </tr>
                   <tr>
                       <th scope="row">2</th>
@@ -321,9 +364,9 @@
                       <td>IT</td>
                       <td>50</td>
                       <td>100</td>
-                      
-                      <td><a href="" data-target="#editStage" data-toggle="modal">Edit</a> | <a href="" data-target="#deleteStage"
-                          data-toggle="modal" class="text-danger">Delete</a></td>
+                      <td><a href="" data-target="#edit" data-toggle="modal">Edit</a> | 
+                        <a href="" data-target="#delete" data-toggle="modal" class="text-danger">Delete</a>
+                      </td>
                   </tr>
                 </tbody>
               </table>
@@ -331,15 +374,8 @@
           </div>
           <!-- partial -->
         </div>
-      
-
-      <!-- content-wrapper ends -->
       <!-- partial:partials/_footer.html -->
     </div>
-      
-      <!-- page-body-wrapper ends -->
-    
-    <!-- container-scroller -->
   </div>
   <!-- plugins:js -->
   <!--Add country modal-->
