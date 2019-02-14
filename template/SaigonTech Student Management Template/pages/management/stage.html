@@ -17,12 +17,12 @@
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../Daterangepicker/daterangepicker.css">
   <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
-
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="../../index.html">
@@ -73,11 +73,9 @@
         </button>
       </div>
     </nav>
-
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
-
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item nav-profile">
@@ -96,7 +94,6 @@
               </div>
             </div>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#Candidate" aria-expanded="false" aria-controls="auth">
               <i class="menu-icon mdi mdi-table"></i>
@@ -173,26 +170,21 @@
                   <a class="nav-link" href="../../pages/admission/exam.html"> Exam </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../pages/admission/score-exam.html"> Score Of Exam </a>
-                  </li>
-                <li class="nav-item">
                   <a class="nav-link" href="../../pages/admission/stage-detail.html"> Stage Detail </a>
                 </li>
-                
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pages/admission/score-exam.html"> Score Of Exam </a>
+                </li>
               </ul>
             </div>
           </li>
-
         </ul>
       </nav>
-
       <!-- content-wrapper ends -->
-
       <div class="main-panel">
-     
         <div class="card">
           <div class="card-header text-dark">
-            Stage
+            Stage Detail
             <div class="ml-auto d-inline float-right">
               <button type="button" class="btn btn-primary btn-sm ml-auto" data-toggle="modal" data-target="#addStage">Add</button>
             </div>
@@ -213,7 +205,7 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputStage" placeholder="Enter begin stage">
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Enter new stage">
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputSemester">Semester</label>
@@ -289,19 +281,19 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputStage" value="Stage 1">
+                          <input type="text" class="form-control mb-2" id="inputExamTime" value="Stage 1">
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputSemester">Semester</label>
                           <select id="inputSemester" class="form-control">
-                            <option selected>Spring</option>
+                            <option selected>Choose...</option>
                             <option>...</option>
                           </select>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputYear">Year</label>
                           <select id="inputYear" class="form-control">
-                            <option selected>2019</option>
+                            <option selected>Choose...</option>
                             <option>...</option>
                           </select>
                         </div>
@@ -362,7 +354,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p class="text-danger">Are you sure delete Stage?</p>
+                    <p class="text-danger">Are you sure delete stage?</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -387,19 +379,20 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" value="Stage 1" readonly>
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1"
+                            readonly>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputSemester">Semester</label>
                           <select id="inputSemester" class="form-control" disabled>
-                            <option selected>Spring</option>
+                            <option selected>Choose...</option>
                             <option>...</option>
                           </select>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputYear">Year</label>
                           <select id="inputYear" class="form-control" disabled>
-                            <option selected>2019</option>
+                            <option selected>Choose...</option>
                             <option>...</option>
                           </select>
                         </div>
@@ -413,7 +406,8 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="date" class="form-control" id="inputDateTime" readonly>
+                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019"
+                              readonly>
                           </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -424,18 +418,21 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="date" class="form-control" id="inputExamDate" readonly>
+                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019"
+                              readonly>
                           </div>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" name="datetimes" disabled>
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15"
+                            readonly>
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" name="datetimes" disabled>
+                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30"
+                            readonly>
                         </div>
                       </div>
                     </form>
@@ -461,14 +458,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr data-toggle="modal">
                   <th scope="row">1</th>
                   <td>Stage 1</td>
                   <td>18/09/2018</td>
                   <td>01/10/2018</td>
                   <td>8h15 - 10h15</td>
                   <td>10h30 - 11h30</td>
-                  <td><a href="" data-target="#detailStage" data-toggle="modal" class="text-warning">Detail</a>
+                  <td><a href="" data-target="#detailStage" data-toggle="modal" class="text-warning">Details</a>
                     | <a href="" data-target="#editStage" data-toggle="modal">Edit</a>
                     | <a href="" data-target="#deleteStage" data-toggle="modal" class="text-danger">Delete</a>
                   </td>
@@ -496,10 +493,8 @@
         </div>
         <!-- partial -->
       </div>
-
       <!-- page-body-wrapper ends -->
     </div>
-
     <!-- container-scroller -->
     <!-- plugins:js -->
   </div>
@@ -518,7 +513,7 @@
   <!-- script customer -->
   <script type="text/javascript" src="../../Daterangepicker/moment.min.js"></script>
   <script type="text/javascript" src="../../Daterangepicker/daterangepicker.min.js"></script>
-  <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+
   <script>
     $(function () {
       $('input[name="datetimes"]').daterangepicker({
@@ -537,30 +532,26 @@
 
   </div>
 </footer>
-  <script>
-    document.onkeydown = fkey;
-    document.onkeypress = fkey
-    document.onkeyup = fkey;
 
-var wasPressed = false;
+<script>
+  document.onkeydown = fkey;
+  document.onkeypress = fkey
+  document.onkeyup = fkey;
+
+  var wasPressed = false;
 
 
-function fkey(e){
-        e = e || window.event;
-       if( wasPressed ) return; 
+  function fkey(e) {
+    e = e || window.event;
+    if (wasPressed) return;
 
-       if (e.code === 'F5')  {
-             alert("f5 pressed");
-            wasPressed = true;
-        }else {
-            alert("Window closed");
-        }
- }
-    
-  
-  
-  
-  
-  </script>
+    if (e.code === 'F5') {
+      alert("f5 pressed");
+      wasPressed = true;
+    } else {
+      alert("Window closed");
+    }
+  }
+</script>
 
 </html>
