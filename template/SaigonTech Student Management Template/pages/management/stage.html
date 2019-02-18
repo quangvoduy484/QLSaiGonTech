@@ -118,7 +118,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#Management" aria-expanded="false" aria-controls="Management">
               <i class="menu-icon mdi mdi-table"></i>
-              <span class="menu-title">Managementt</span>
+              <span class="menu-title">Management</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="Management">
@@ -163,13 +163,13 @@
             <div class="collapse" id="Admission">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="../../pages/admission/exam.html"> Exam </a>
+                  <a class="nav-link" href="../../pages/admission/exam.html"> Exam Subject </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../pages/admission/scoremajor.html"> Score Of Exam Subject</a>
+                  </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../../pages/admission/stage-detail.html"> Stage Detail </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../../pages/admission/score-exam.html"> Score Of Exam </a>
                 </li>
               </ul>
             </div>
@@ -201,7 +201,7 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Enter new stage">
+                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Enter New Stage Name">
                         </div>
                         <div class="form-group col-md-4">
                           <label for="inputSemester">Semester</label>
@@ -350,7 +350,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p class="text-danger">Are you sure delete stage?</p>
+                    <p class="text-danger">Are you sure delete this Stage?</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -375,7 +375,7 @@
                       <div class="form-row">
                         <div class="form-group col-md-4">
                           <label for="inputStage">Stage Name</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="Stage 1"
+                          <input type="text" class="form-control mb-2" id="inputExamTime" value="Stage 1"
                             readonly>
                         </div>
                         <div class="form-group col-md-4">
@@ -402,7 +402,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputDateTime" placeholder="01/01/2019"
+                            <input type="text" class="form-control" id="inputDateTime" value="01/01/2019"
                               readonly>
                           </div>
                         </div>
@@ -414,7 +414,7 @@
                                 <a href="#"><i class="mdi mdi-calendar-plus"></i></a>
                               </div>
                             </div>
-                            <input type="text" class="form-control" id="inputExamDate" placeholder="01/01/2019"
+                            <input type="text" class="form-control" id="inputExamDate" value="01/01/2019"
                               readonly>
                           </div>
                         </div>
@@ -422,19 +422,19 @@
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label for="inputExamTime">Exam Time</label>
-                          <input type="text" class="form-control mb-2" id="inputExamTime" placeholder="8h15 - 10h15"
+                          <input type="text" class="form-control mb-2" id="inputExamTime" value="8h15 - 10h15"
                             readonly>
                         </div>
                         <div class="form-group col-md-6">
                           <label for="inputTimeEnglish">Time Of English Exam</label>
-                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" placeholder="10h30 - 11h30"
+                          <input type="text" class="form-control mb-2" id="inputTimeEnglish" value="10h30 - 11h30"
                             readonly>
                         </div>
                       </div>
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
