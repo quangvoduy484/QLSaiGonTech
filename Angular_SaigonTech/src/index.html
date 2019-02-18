@@ -14,6 +14,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/Daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="/assets/DataTable/jquery.dataTables.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -35,6 +36,38 @@
   <!-- script customer -->
   <script type="text/javascript" src="/assets/Daterangepicker/moment.min.js"></script>
   <script type="text/javascript" src="/assets/Daterangepicker/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="/assets/DataTable/jquery.dataTables.min.js"></script>
+  <script>
+    $(function () {
+      $('input[name="datetimes"]').daterangepicker({
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+          format: 'DD/MM/YYYY hh:mm A'
+        }
+      });
+    });
+
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+    });
+
+  </script>
+
+  <script>
+    $(function () {
+      $('input[name="datetimes"]').daterangepicker({
+        timePicker: true,
+        singleDatePicker: true,
+        showDropdowns: true,
+        locale: {
+          format: 'DD/MM/YYYY hh:mm A'
+        }
+      });
+    });
+
+  </script>
 </body>
 
 </html>
