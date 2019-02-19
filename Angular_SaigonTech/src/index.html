@@ -39,7 +39,7 @@
   <script type="text/javascript" src="/assets/DataTable/jquery.dataTables.min.js"></script>
   <script>
     $(function () {
-      $('input[name="datetimes"]').daterangepicker({
+      $('input[name="datetime"]').daterangepicker({
         timePicker: true,
         startDate: moment().startOf('hour'),
         endDate: moment().startOf('hour').add(32, 'hour'),
@@ -47,10 +47,6 @@
           format: 'DD/MM/YYYY hh:mm A'
         }
       });
-    });
-
-    $(document).ready(function () {
-      $('#myTable').DataTable();
     });
 
   </script>
