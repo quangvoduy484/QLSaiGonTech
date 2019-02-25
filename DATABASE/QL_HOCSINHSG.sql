@@ -2,7 +2,7 @@
 /* DBMS name:      Microsoft SQL Server 2008                    */
 /* Created on:     2/19/2019 1:41:50 PM                         */
 /*==============================================================*/
-
+CREATE DATABASE SaigonTech
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
@@ -1060,3 +1060,5 @@ alter table STAGEDETAILS
       references MAJOR (MAJOR_ID)
 go
 
+---
+alter
